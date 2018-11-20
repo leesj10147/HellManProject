@@ -10,7 +10,6 @@ import java.util.TreeSet;
 
 public class Handler
 {
-    private static final long serialVersionUID = 1112L;
     private java.util.TreeSet<GameObject> objects = new java.util.TreeSet<>();
     private Queue<GameObject> addList = new LinkedList<>();
     private Queue<GameObject> removeList = new LinkedList<>();

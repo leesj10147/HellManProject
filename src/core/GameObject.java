@@ -9,7 +9,6 @@ import java.io.Serializable;
 public abstract class GameObject implements Comparable, Serializable
 {
 
-    private static final long serialVersionUID = 1111L;
     public boolean isMustUpdateMouseClickedLocation()
     {
         return mustUpdateMouseClickedLocation;
@@ -162,6 +161,7 @@ public abstract class GameObject implements Comparable, Serializable
     {
         return hashCode() == obj.hashCode();
     }
+
     @Override
     public int compareTo(Object o)
     {

@@ -218,7 +218,12 @@ public class BattleScene extends Scene
             {
 
                 CheckGameObject chk = (CheckGameObject) obj;
-                System.out.println(chk.a);
+ /*               System.out.print(chk.a);
+                if (chk.team == Team.Red) System.out.print("Red");
+                else if (chk.team == Team.Blue) System.out.print("Blue");
+
+                if (getTeam() == Team.Red) System.out.println("  Red");
+                else if (getTeam() == Team.Blue) System.out.println("  Blue");*/
                 TreeSet<GameObject> chkTeam = handler.getMyTeamObject(chk.team);
                 for (GameObject object : chkTeam)
                 {

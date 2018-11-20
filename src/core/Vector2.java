@@ -5,7 +5,6 @@ import java.io.Serializable;
 
 public class Vector2 implements Serializable
 {
-    private static final long serialVersionUID = 1113L;
     public static final Vector2 down = new Vector2(0, 1);
     public static final Vector2 left = new Vector2(-1, 0);
     public static final Vector2 one = new Vector2(1, 1);

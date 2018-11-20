@@ -54,7 +54,7 @@ public class TcpReceive extends Receive
     {
         try
         {
-            GameObject obj = (GameObject)ois.readObject();
+            GameObject obj = (GameObject)ois.readUnshared();
             queue.offer(obj);
         } catch (IOException e)
         {

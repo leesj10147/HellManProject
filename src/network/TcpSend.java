@@ -42,7 +42,8 @@ public class TcpSend extends Send
     {
         try
         {
-            oos.writeObject(object);
+            oos.writeUnshared(object);
+            oos.flush();
         } catch (IOException e)
         {
             e.printStackTrace();
