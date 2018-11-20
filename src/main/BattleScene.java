@@ -143,6 +143,7 @@ public class BattleScene extends Scene
                         {
                             e1.printStackTrace();
                         }
+                        send.sendInt(12345);
                     } else
                     {
                         Socket s =null;
