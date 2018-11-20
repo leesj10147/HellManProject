@@ -19,6 +19,7 @@ public class CheckGameObject extends GameObject
     {
         this(Integer.MAX_VALUE, Integer.MAX_VALUE, 0, 0, ID.NetworkChecker, handler, team);
         this.a = (int)(Math.random() * 100);
+        if (team ==Team.Red) this.a += 10000;
     }
 
     private CheckGameObject(double x, double y, int WIDTH, int HEIGHT, ID id, Handler handler, Team team)

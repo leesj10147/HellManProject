@@ -14,6 +14,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.HashSet;
 import java.util.TreeSet;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class BattleScene extends Scene
 {
@@ -66,7 +67,7 @@ public class BattleScene extends Scene
     {
         class MyDialogPopup extends JDialog
         {
-            boolean end = false;
+            AtomicBoolean end = new AtomicBoolean(false);
 
             MyDialogPopup()
             {
@@ -143,7 +144,6 @@ public class BattleScene extends Scene
                         {
                             e1.printStackTrace();
                         }
-                        send.sendInt(12345);
                     } else
                     {
                         Socket s =null;
@@ -180,7 +180,8 @@ public class BattleScene extends Scene
                     }
                     new Thread(receive).start();
                     System.out.println("end setting info");
-                    end = true;
+                    end.set(true);
+                    this.setVisible(false);
                     this.dispose();
 
 
@@ -188,10 +189,10 @@ public class BattleScene extends Scene
 
             }
         }
-        JDialog j = new MyDialogPopup();
-        while (!((MyDialogPopup) j).end)
+        MyDialogPopup j = new MyDialogPopup();
+        while (!j.end.get())
         {
-            System.out.println("loop");
+            //System.out.println("loop");
         }
 
     }
