@@ -120,7 +120,6 @@ public class BasicInfantry extends GameObject implements Battleable
         }
         if (!notAttack)
         {
-
             ArrayList<GameObject> infatries = handler.findObjectsById(ID.Infantry);
             infatries.addAll(handler.findObjectsById(ID.Tower));
             infatries.addAll(handler.findObjectsById(ID.Nexus));
@@ -128,13 +127,14 @@ public class BasicInfantry extends GameObject implements Battleable
             for (GameObject object : infatries)
             {
                 BasicInfantry infantry = (BasicInfantry) object;
-                if (infantry.team != this.team && getAttackBounds().intersects(infantry.getBounds()) &&
+                if (!infantry.ignoreCollision && infantry.team != this.team && getAttackBounds().intersects(infantry.getBounds()) &&
                             System.currentTimeMillis() - lastAttackTime >= delayBetweenAttack)
                 {
                     this.attack(infantry);
                     lastAttackTime = System.currentTimeMillis();
                 }
             }
+
         }
         if (destination != null && !notMove)
         {

@@ -55,6 +55,7 @@ public final class Game extends Canvas implements Runnable
                 tick();
                 render();
                 --delta;
+
             }
         }
     }

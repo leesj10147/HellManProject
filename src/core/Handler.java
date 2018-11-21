@@ -121,7 +121,7 @@ public class Handler
         ArrayList<GameObject> result = new ArrayList<>();
         for (GameObject tempObject : objects)
         {
-            if (tempObject.getBounds().intersects(bound)) result.add(tempObject);
+            if (tempObject.getBounds().intersects(bound) && !tempObject.isIgnoreCollision()) result.add(tempObject);
         }
         return result;
     }

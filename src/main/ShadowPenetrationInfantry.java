@@ -72,8 +72,10 @@ public class ShadowPenetrationInfantry extends BasicInfantry
             g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
             super.render(g2d);
             g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1));
+            this.ignoreCollision = true;
         } else
         {
+            this.ignoreCollision = false;
             super.render(g2d);
         }
     }

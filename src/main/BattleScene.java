@@ -12,6 +12,7 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.TreeSet;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -28,7 +29,7 @@ public class BattleScene extends Scene
     private InetAddress otherAddress;
     private Receive receive;
     private Send send;
-    private Rectangle[] sector;
+    private Rectangle[] sectors;
     private Team[] teamOfSector;
 
     public BattleScene(Handler handler)
@@ -37,17 +38,17 @@ public class BattleScene extends Scene
         setInfo();
         Nexus test6;
         if (team == Team.Red)
-            test6 = new Nexus(team, 1000 , 1000, GameManager.loadImage("cannon.png"), ID.Nexus, handler, RenderOrder.ForeGround.order);
+            test6 = new Nexus(team, 1000, 1000, GameManager.loadImage("cannon.png"), ID.Nexus, handler, RenderOrder.ForeGround.order);
         else
-            test6 = new Nexus(team, 0  , 0, GameManager.loadImage("cannon.png"), ID.Nexus, handler, RenderOrder.ForeGround.order);
+            test6 = new Nexus(team, 0, 0, GameManager.loadImage("cannon.png"), ID.Nexus, handler, RenderOrder.ForeGround.order);
         handler.addObject(test6);
-        sector = new Rectangle[9];
+        sectors = new Rectangle[9];
         teamOfSector = new Team[9];
         for (int i = 0; i < 9; ++i)
         {
             int r = i / 3, c = i % 3;
             teamOfSector[i] = Team.Neutrality;
-            sector[i] = new Rectangle(1400 * r, 990 * c, 1400, 990);
+            sectors[i] = new Rectangle(1400 * r, 990 * c, 1400, 990);
         }
         teamOfSector[0] = Team.Red;
         teamOfSector[8] = Team.Blue;
@@ -58,8 +59,8 @@ public class BattleScene extends Scene
 
     public Team getTeamOfSector(Point p)
     {
-        for (int i = 0; i < sector.length; ++i)
-            if (sector[i].contains(p)) return teamOfSector[i];
+        for (int i = 0; i < sectors.length; ++i)
+            if (sectors[i].contains(p)) return teamOfSector[i];
         return Team.Neutrality;
     }
 
@@ -146,7 +147,7 @@ public class BattleScene extends Scene
                         }
                     } else
                     {
-                        Socket s =null;
+                        Socket s = null;
                         try
                         {
                             System.out.println("c1");
@@ -261,11 +262,13 @@ public class BattleScene extends Scene
 
         }
     }
+
     int cnt = 0;
+
     private void updateSend()
     {
         ++cnt;
-        if (cnt%10==1) return;
+        if (cnt % 10 == 1) return;
         TreeSet<GameObject> tosend = handler.getMyTeamObject(team);
         for (GameObject object : tosend)
         {
@@ -275,21 +278,21 @@ public class BattleScene extends Scene
         send.sendObject(new CheckGameObject(handler, team));
     }
 
-    public static boolean isOurTeam(GameObject object)
+    public static boolean isOurTeam(GameObject object, Team whosTeam)
     {
         if (object instanceof BasicInfantry)
         {
-            if (((BasicInfantry) object).team == team) return true;
+            if (((BasicInfantry) object).team == whosTeam) return true;
             else return false;
         }
         if (object instanceof Bullet)
         {
-            if (((Bullet) object).team == team) return true;
+            if (((Bullet) object).team == whosTeam) return true;
             else return false;
         }
         if (object instanceof Nexus)
         {
-            if (((Nexus) object).team == team) return true;
+            if (((Nexus) object).team == whosTeam) return true;
             else return false;
         }
         return false;
@@ -309,6 +312,21 @@ public class BattleScene extends Scene
             updateSend();
             updateReceive();
         }
+        ArrayList<GameObject> towers = handler.findObjectsById(ID.Tower);
+        for (int i = 1; i < sectors.length - 1; ++i)
+        {
+            int redCnt = 0;
+            int blueCnt = 0;
+            for (GameObject tower : towers)
+            {
+                if (!sectors[i].contains(tower.getMidPoint().getPoint())) continue;
+                if (isOurTeam(tower, Team.Red)) ++redCnt;
+                else if (isOurTeam(tower, Team.Blue)) ++blueCnt;
+            }
+            if (redCnt > blueCnt) teamOfSector[i] = Team.Red;
+            else if (blueCnt > redCnt) teamOfSector[i] = Team.Blue;
+            else teamOfSector[i] = Team.Neutrality;
+        }
 
         if (MouseInput.hasEvent())
         {
@@ -322,7 +340,7 @@ public class BattleScene extends Scene
                 }
                 for (GameObject object : handler.getObjects())
                 {
-                    if (object.isMustUpdateMouseClickedLocation() && isOurTeam(object))
+                    if (object.isMustUpdateMouseClickedLocation() && isOurTeam(object, getTeam()))
                     {
                         object.mouseClickedOnMapLocation = getOnMapLocation(MouseInput.getLocation());
                     }
@@ -390,18 +408,23 @@ public class BattleScene extends Scene
         return new Point(p.x + cameraX, p.y + cameraY);
     }
 
+    public static Point getOnScreenLocation(Point onMapLocation)
+    {
+        return new Point(onMapLocation.x - cameraX, onMapLocation.y - cameraY);
+    }
+
     @Override
     public void render(Graphics2D g2d)
     {
         g2d.translate(-cameraX, -cameraY);
         ///////////////////////////////////////////////Main Main Main
         g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.1f));
-        for (int i = 0; i < sector.length; ++i)
+        for (int i = 0; i < sectors.length; ++i)
         {
             if (teamOfSector[i] == Team.Red) g2d.setColor(Color.magenta);
             else if (teamOfSector[i] == Team.Blue) g2d.setColor(Color.cyan);
             else g2d.setColor(Color.ORANGE);
-            g2d.fill(sector[i]);
+            g2d.fill(sectors[i]);
         }
         g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
         handler.render(g2d);

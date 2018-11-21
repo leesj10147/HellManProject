@@ -5,6 +5,7 @@ import core.*;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 public class Nexus extends BasicTower implements Battleable
 {
@@ -36,11 +37,21 @@ public class Nexus extends BasicTower implements Battleable
     protected Rectangle[] items()
     {
         Rectangle[] ret = new Rectangle[6];
-        for (int r = 0; r < 2; ++r)
-            for (int c = 0; c < 3; ++c)
-            {
-                ret[3 * r + c] = new Rectangle(c * 83 + (int) this.getMidPoint().x, r * 50 + (int) this.getMidPoint().y, 83, 50);
-            }
+        if (!new Rectangle(0, 0, Game.WIDTH, Game.HEIGHT).contains(BattleScene.getOnScreenLocation(this.getMidPoint().getPoint())))
+        {
+            for (int r = 0; r < 2; ++r)
+                for (int c = 0; c < 3; ++c)
+                {
+                    ret[3 * r + c] = new Rectangle(c * 83 + BattleScene.getCameraX(), r * 50 + BattleScene.getCameraY(), 83, 50);
+                }
+        } else
+        {
+            for (int r = 0; r < 2; ++r)
+                for (int c = 0; c < 3; ++c)
+                {
+                    ret[3 * r + c] = new Rectangle(c * 83 + (int) this.getMidPoint().x, r * 50 + (int) this.getMidPoint().y, 83, 50);
+                }
+        }
         return ret;
     }
 
@@ -48,6 +59,17 @@ public class Nexus extends BasicTower implements Battleable
     private String imageArrangementUnit;
     private int itemNumberOfSelectedUnit;
     private int itemOnMouse = -1;
+
+    boolean canArrange(Point MidPoint)
+    {
+        ArrayList<GameObject> towers = handler.findObjectsById(ID.Tower);
+        towers.add(this);
+        for (GameObject tower : towers)
+        {
+            if (tower.getMidPoint().getPoint().distance(MidPoint) < 500) return true;
+        }
+        return false;
+    }
 
     @Override
     public void tick()
@@ -61,7 +83,8 @@ public class Nexus extends BasicTower implements Battleable
             p.x -= itemImage.getWidth() / 2;
             p.y -= itemImage.getHeight() / 2;
             Rectangle chk = new Rectangle(p.x, p.y, itemImage.getWidth(), itemImage.getHeight());
-            if (!this.mouseClickedOnMapLocation.equals(new Point(Integer.MAX_VALUE, Integer.MAX_VALUE)) && handler.Collide(chk).size() == 0)
+            if (!this.mouseClickedOnMapLocation.equals(new Point(Integer.MAX_VALUE, Integer.MAX_VALUE)) &&
+                        canArrange(new Point((int) (chk.x + chk.getWidth() / 2), (int) (chk.y + chk.getHeight() / 2))) && handler.Collide(chk).size() == 0)
             {
                 if (itemNumberOfSelectedUnit == 1)
                     handler.addObject(new BasicTower(this.team, p.x, p.y, itemImage, ID.Tower, handler, RenderOrder.Main.order));
@@ -138,7 +161,8 @@ public class Nexus extends BasicTower implements Battleable
             Point p = BattleScene.getOnMapLocation(MouseInput.getLocation());
             p.x -= itemImage.getWidth() / 2;
             p.y -= itemImage.getHeight() / 2;
-            if (handler.Collide(new Rectangle(p.x, p.y, itemImage.getWidth(), itemImage.getHeight())).size() > 0)
+            if (handler.Collide(new Rectangle(p.x, p.y, itemImage.getWidth(), itemImage.getHeight())).size() > 0
+                        || !canArrange(new Point((p.x + itemImage.getWidth() / 2), (p.y + itemImage.getHeight() / 2))))
                 itemImage = GameManager.setEdge(itemImage, Color.red);
             else
                 itemImage = GameManager.setEdge(itemImage, Color.green);
