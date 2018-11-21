@@ -56,6 +56,7 @@ public final class Game extends Canvas implements Runnable
                 render();
                 --delta;
             }
+            System.out.println(delta);
         }
     }
 

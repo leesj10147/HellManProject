@@ -1,6 +1,9 @@
 package core;
 
 import javax.imageio.ImageIO;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
@@ -153,5 +156,22 @@ public class GameManager
         }
         edgedImage.put((image.hashCode() + edgeColor.toString()).hashCode(), res);
         return res;
+    }
+    public static void playSound(String file, boolean Loop)
+    {
+        try
+        {
+            AudioInputStream au= AudioSystem.getAudioInputStream(new File(file).getAbsoluteFile());
+
+            Clip clip = AudioSystem.getClip();
+
+            clip.open(au);
+            clip.start();
+            if (Loop) clip.loop(-1);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 }

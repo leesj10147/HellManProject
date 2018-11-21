@@ -194,6 +194,7 @@ public class BattleScene extends Scene
         {
             //System.out.println("loop");
         }
+        GameManager.playSound("backgroundMusic.wav", true);
 
     }
 
@@ -260,9 +261,11 @@ public class BattleScene extends Scene
 
         }
     }
-
+    int cnt = 0;
     private void updateSend()
     {
+        ++cnt;
+        if (cnt%10==1) return;
         TreeSet<GameObject> tosend = handler.getMyTeamObject(team);
         for (GameObject object : tosend)
         {

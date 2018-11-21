@@ -30,6 +30,7 @@ public class ShadowPenetrationInfantry extends BasicInfantry
     {
         this(team, x, y, image.getWidth(), image.getHeight(), id, handler, renderOrder);
         this.image = image;
+        this.originalImage = image;
     }
 
     private long inputTeamPositionTime;

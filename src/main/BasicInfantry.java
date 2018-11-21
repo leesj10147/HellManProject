@@ -191,9 +191,9 @@ public class BasicInfantry extends GameObject implements Battleable
             if (Math.atan2(velY, velX) != 0 && recentTickMoved)
             {
                 double beta = realAngle - Math.atan2(velY, velX);
-                if (Math.sin(beta) < 0) realAngle += 0.2;
-                else realAngle -= 0.2;
-                if (Math.abs(realAngle - angle) > 0.4) angle = realAngle;
+                if (Math.sin(beta) < 0) realAngle += 0.1;
+                else realAngle -= 0.1;
+                if (Math.abs(realAngle - angle) > 0.2) angle = realAngle;
             }
             at.rotate(angle, x + image.getWidth() / 2, y + image.getHeight() / 2);
             g2d.setTransform(at);
