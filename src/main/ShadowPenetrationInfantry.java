@@ -24,6 +24,8 @@ public class ShadowPenetrationInfantry extends BasicInfantry
         this.nowPosition = team;
         this.inputTeamPositionTime = BattleScene.syncedCurrentTime();
         this.nowPosition = team;
+        this.delayBetweenAttack = 1000;
+        this.attackSound = "sound\\hit-sound3.wav";
     }
 
     public ShadowPenetrationInfantry(Team team, double x, double y, BufferedImage image, ID id, Handler handler, int renderOrder)

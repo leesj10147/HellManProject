@@ -42,7 +42,7 @@ public class Bullet extends GameObject implements Battleable
             if (!(other instanceof Battleable)) continue;
             if (other instanceof BasicInfantry && ((BasicInfantry) other).team != this.team)
             {
-                ((BasicInfantry) other).applyDamage(this, damage);
+                this.attack(damage, (BasicInfantry) other);
                 handler.removeObject(this);
             }
         }
@@ -72,6 +72,11 @@ public class Bullet extends GameObject implements Battleable
         return new Rectangle((int) x, (int) y, WIDTH, HEIGHT);
     }
 
+    public void attack(double damage, BasicInfantry target)
+    {
+        target.applyDamage(this, damage);
+        GameManager.playSound("sound\\hit-sound2.wav", false);
+    }
     @Override
     public void applyDamage(Battleable attacker, double damage)
     {

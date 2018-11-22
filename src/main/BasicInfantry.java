@@ -23,7 +23,7 @@ public class BasicInfantry extends GameObject implements Battleable
     public double MAX_HP;
     protected transient BufferedImage image;
     protected transient BufferedImage originalImage;
-
+    protected String attackSound = "";
     public double getHp()
     {
         return hp;
@@ -103,7 +103,7 @@ public class BasicInfantry extends GameObject implements Battleable
         this.hp = MAX_HP;
         this.attackRange = 20;
         this.MAX_HP = MAX_HP;
-
+        this.attackSound = "sound\\hit-sound1.wav";
     }
 
     private long lastAttackTime = 0;
@@ -251,6 +251,7 @@ public class BasicInfantry extends GameObject implements Battleable
         {
             ((BattleScene) GameManager.scene).sendObject(new DamageInfo(target.hashCode(), this.damage));
         }
+        GameManager.playSound(attackSound, false);
     }
     //어플라이 데미지는 상대편 컴퓨터가
     @Override

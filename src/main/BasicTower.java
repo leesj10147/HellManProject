@@ -51,6 +51,7 @@ public class BasicTower extends BasicInfantry
     public void applyDamage(Battleable attacker, double damage)
     {
         this.hp -= damage;
+
     }
 
     @Override

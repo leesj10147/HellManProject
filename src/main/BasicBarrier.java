@@ -6,16 +6,10 @@ import core.ID;
 import core.RenderOrder;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
-public class BasicBarrier extends GameObject implements Battleable
+public class BasicBarrier extends BasicTower
 {
-    public double getHp()
-    {
-        return hp;
-    }
-
-    private double hp;
-    public final Team team;
     public BasicBarrier(Team team, double x, double y, int WIDTH, int HEIGHT, ID id, Handler handler)
     {
         this(team, x, y, WIDTH, HEIGHT, id, handler, RenderOrder.Default.order);
@@ -23,22 +17,22 @@ public class BasicBarrier extends GameObject implements Battleable
 
     public BasicBarrier(Team team, double x, double y, int WIDTH, int HEIGHT, ID id, Handler handler, int renderOrder)
     {
-        super(x, y, WIDTH, HEIGHT, id, handler, renderOrder);
-        this.team = team;
-        this.hp = 300;
+        super(team, x, y, WIDTH, HEIGHT, id, handler, renderOrder);
+        this.hp = 1000;
+        this.notAttack = true;
+
     }
 
-    @Override
-    public void tick()
+    public BasicBarrier(Team team, double x, double y, BufferedImage image, ID id, Handler handler, int renderOrder)
     {
-
+        super(team, x, y, image, id, handler, renderOrder);
     }
 
     @Override
     public void render(Graphics2D g2d)
     {
         g2d.setColor(Color.green);
-        g2d.draw(getBounds());
+        g2d.fill(getBounds());
     }
 
     @Override
@@ -47,9 +41,4 @@ public class BasicBarrier extends GameObject implements Battleable
         return new Rectangle((int)x, (int)y, WIDTH, HEIGHT);
     }
 
-    @Override
-    public void applyDamage(Battleable attacker, double damage)
-    {
-
-    }
 }

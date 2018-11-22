@@ -9,8 +9,11 @@ import java.util.ArrayList;
 
 public class Nexus extends BasicTower implements Battleable
 {
-    private String[] itemList = new String[6];
-    private String[] itemDescription = new String[6];
+    private String[] itemList = new String[9];
+    private String[] itemDescription = new String[9];
+    public int gold = 50;
+    public int crop = 50;
+    public int odamant = 50;
 
     public Nexus(Team team, double x, double y, BufferedImage image, ID id, Handler handler, int renderOrder)
     {
@@ -25,28 +28,28 @@ public class Nexus extends BasicTower implements Battleable
         itemList[4] = "BasicInfantry.png";
         itemList[5] = "BasicInfantry.png";
 
-        itemDescription[0] = "이 보병은 정말 적잘하다고 하는 것이 적절한 설명이라고 생각하는 게 적절하다고 생각합니다.";
+        itemDescription[0] = "이 친구는 주변의 광산, 농장, 제련소에서 노동을 하며 돈을 벌 수 있습니다.";
         itemDescription[1] = "적절한 사거리와 적절한 데미지를 가지고, 적절한 크기와 함께 적절한 아름다움을 가진 적절한 대포입니다.\n 적절한 가격으로 적절하게 지을 수 있습니다.";
         itemDescription[2] = "한 대만 맞으면 부셔져 버릴 것 같은 모습과는 다르게, 끝에 도달하기만 한다면... 콰광!";
         itemDescription[3] = "하나는 약하지만, 모이면 강력합니다! 3인조로 뭉쳐 다니는 이 골칫거리들은 하는 짓마다 얄밉기짝이 없다고 하더군요.";
         itemDescription[4] = "그림자같이 은밀하고 빠르게 침투한다고 하여 그림자 침투병이 되었습니다.\n하지만, 걸친 게 천쪼가리뿐이라 너무나도 연약한 존재이기도 합니다.";
-        itemDescription[5] = "";
+        itemDescription[5] = "사막잡신 \'느킨\'을 믿는 부족의 주술사입니다. 이교도라고는 하지만, 아군들의 체력을 채워주는 실력은 그 누구도 부정할 수 없을 만큼 확실합니다.";
         this.printBottom = false;
     }
 
     protected Rectangle[] items()
     {
-        Rectangle[] ret = new Rectangle[6];
+        Rectangle[] ret = new Rectangle[9];
         if (!new Rectangle(0, 0, Game.WIDTH, Game.HEIGHT).contains(BattleScene.getOnScreenLocation(this.getMidPoint().getPoint())))
         {
-            for (int r = 0; r < 2; ++r)
+            for (int r = 0; r < 3; ++r)
                 for (int c = 0; c < 3; ++c)
                 {
                     ret[3 * r + c] = new Rectangle(c * 83 + BattleScene.getCameraX(), r * 50 + BattleScene.getCameraY(), 83, 50);
                 }
         } else
         {
-            for (int r = 0; r < 2; ++r)
+            for (int r = 0; r < 3; ++r)
                 for (int c = 0; c < 3; ++c)
                 {
                     ret[3 * r + c] = new Rectangle(c * 83 + (int) this.getMidPoint().x, r * 50 + (int) this.getMidPoint().y, 83, 50);
@@ -98,8 +101,7 @@ public class Nexus extends BasicTower implements Battleable
         {
             if (rect[0].contains(mouseClickedOnMapLocation))
             {
-                handler.addObject(new NormalInfantry(team, this.x + this.getWIDTH(), this.y + this.getWIDTH(), GameManager.loadImage(itemList[0]), ID.Infantry, handler, RenderOrder.Main.order));
-                this.mouseClickedOnMapLocation = new Point(Integer.MAX_VALUE, Integer.MAX_VALUE);
+                handler.addObject(new MoneyMakerInfantry(team, this.x + this.getWIDTH(), this.y + this.getHEIGHT(), GameManager.loadImage(itemList[0]), ID.Infantry, handler, RenderOrder.Main.order));
             } else if (rect[1].contains(mouseClickedOnMapLocation))
             {
                 imageArrangementUnit = itemList[1];
@@ -108,13 +110,16 @@ public class Nexus extends BasicTower implements Battleable
                 this.mouseClickedOnMapLocation = new Point(Integer.MAX_VALUE, Integer.MAX_VALUE);
             } else if (rect[2].contains(mouseClickedOnMapLocation))
             {
-                handler.addObject(new SkeletonBombInfantry(team, this.x + this.getWIDTH(), this.y + this.getWIDTH(), GameManager.loadImage(itemList[2]), ID.Infantry, handler, RenderOrder.Main.order));
+                handler.addObject(new SkeletonBombInfantry(team, this.x + this.getWIDTH(), this.y + this.getHEIGHT(), GameManager.loadImage(itemList[2]), ID.Infantry, handler, RenderOrder.Main.order));
             } else if (rect[3].contains(mouseClickedOnMapLocation))
             {
-                handler.addObject(new GoblinGangInfantry(team, this.x + this.getWIDTH(), this.y + this.getWIDTH(), GameManager.loadImage(itemList[3]), ID.Infantry, handler, RenderOrder.Main.order));
+                handler.addObject(new GoblinGangInfantry(team, this.x + this.getWIDTH(), this.y + this.getHEIGHT(), GameManager.loadImage(itemList[3]), ID.Infantry, handler, RenderOrder.Main.order));
             } else if (rect[4].contains(mouseClickedOnMapLocation))
             {
-                handler.addObject(new ShadowPenetrationInfantry(team, this.x + this.getWIDTH(), this.y + this.getWIDTH(), GameManager.loadImage(itemList[3]), ID.Infantry, handler, RenderOrder.Main.order));
+                handler.addObject(new ShadowPenetrationInfantry(team, this.x + this.getWIDTH(), this.y + this.getHEIGHT(), GameManager.loadImage(itemList[4]), ID.Infantry, handler, RenderOrder.Main.order));
+            } else if (rect[5].contains(mouseClickedOnMapLocation))
+            {
+                handler.addObject(new NeukinShamanInfantry(team, this.x + this.getWIDTH(), this.y + this.getHEIGHT(), GameManager.loadImage(itemList[5]), ID.Infantry, handler, RenderOrder.Main.order));
             }
             Point p = BattleScene.getOnMapLocation(MouseInput.getLocation());
             boolean contain = false;
@@ -132,6 +137,8 @@ public class Nexus extends BasicTower implements Battleable
         this.mouseClickedOnMapLocation = new Point(Integer.MAX_VALUE, Integer.MAX_VALUE);
     }
 
+    private Font textFont = new Font("Serif", Font.BOLD, 15);
+    private Font moneyFont = new Font("Serif", Font.BOLD, 30);
     @Override
     public void render(Graphics2D g2d)
     {
@@ -171,9 +178,17 @@ public class Nexus extends BasicTower implements Battleable
         if (itemOnMouse != -1)
         {
             Point p = BattleScene.getOnMapLocation(MouseInput.getLocation());
-            g2d.setColor(Color.yellow);
+            g2d.setColor(Color.BLACK);
+            g2d.setFont(textFont);
             g2d.drawString(itemDescription[itemOnMouse], p.x, p.y);
         }
+        g2d.setFont(moneyFont);
+        g2d.setColor(Color.orange);
+        g2d.drawString("Gold : " + gold, BattleScene.getCameraX() + 500, BattleScene.getCameraY()+150);
+        g2d.setColor(Color.orange);
+        g2d.drawString("Crop : " + crop, BattleScene.getCameraX() + 800, BattleScene.getCameraY()+150);
+        g2d.setColor(Color.BLUE);
+        g2d.drawString("Odamant : " + odamant, BattleScene.getCameraX() + 1100, BattleScene.getCameraY()+150);
     }
 
     @Override

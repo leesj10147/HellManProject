@@ -44,7 +44,7 @@ public class NeukinShamanInfantry extends BasicInfantry
             return;
         }
         long nowTime = BattleScene.syncedCurrentTime();
-        if (nowTime - lastTime <= 3000) return;
+        if (nowTime - lastTime <= 1000) return;
         lastTime = nowTime;
         ArrayList<GameObject> infantries = handler.findObjectsById(ID.Infantry);
         for (GameObject object : infantries)

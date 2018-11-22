@@ -196,7 +196,7 @@ public class BattleScene extends Scene
         {
             //System.out.println("loop");
         }
-        GameManager.playSound("backgroundMusic.wav", true);
+        GameManager.playSound("sound\\backgroundMusic.wav", true);
 
     }
 
