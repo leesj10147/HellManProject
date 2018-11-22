@@ -25,20 +25,9 @@ public class BasicBarrier extends BasicTower
 
     public BasicBarrier(Team team, double x, double y, BufferedImage image, ID id, Handler handler, int renderOrder)
     {
-        super(team, x, y, image, id, handler, renderOrder);
-    }
-
-    @Override
-    public void render(Graphics2D g2d)
-    {
-        g2d.setColor(Color.green);
-        g2d.fill(getBounds());
-    }
-
-    @Override
-    public Rectangle getBounds()
-    {
-        return new Rectangle((int)x, (int)y, WIDTH, HEIGHT);
+        this(team, x, y, image.getWidth(), image.getHeight(), id, handler, renderOrder);
+        this.image = image;
+        this.originalImage = image;
     }
 
 }
