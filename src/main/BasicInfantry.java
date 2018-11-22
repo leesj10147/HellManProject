@@ -1,6 +1,7 @@
 package main;
 
 import core.*;
+import network.DamageInfo;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -100,7 +101,7 @@ public class BasicInfantry extends GameObject implements Battleable
         this.delayBetweenAttack = 333;
         this.team = team;
         this.hp = MAX_HP;
-        this.attackRange = 15;
+        this.attackRange = 20;
         this.MAX_HP = MAX_HP;
 
     }
@@ -242,12 +243,16 @@ public class BasicInfantry extends GameObject implements Battleable
         rect.height += 2 * attackRange;
         return rect;
     }
-
+    //어텍은 내 컴퓨터가
     public void attack(Battleable target)
     {
-        target.applyDamage(this, this.damage);
+        if (this.team != BattleScene.getTeam()) return;
+        if (GameManager.scene instanceof  BattleScene)
+        {
+            ((BattleScene) GameManager.scene).sendObject(new DamageInfo(target.hashCode(), this.damage));
+        }
     }
-
+    //어플라이 데미지는 상대편 컴퓨터가
     @Override
     public void applyDamage(Battleable attacker, double damage)
     {

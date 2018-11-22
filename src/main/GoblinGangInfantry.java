@@ -48,7 +48,7 @@ public class GoblinGangInfantry extends BasicInfantry
         this.ignoreCollision = true;
         this.notAttack = true;
         this.damage = 0;
-        this.speed = 10;
+        this.speed = 50;
         this.renderOrder = Integer.MAX_VALUE;
     }
 

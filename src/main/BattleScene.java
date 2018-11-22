@@ -20,7 +20,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class BattleScene extends Scene
 {
     private static Team team = Team.Red;
-    public static long netWorkDeltaTime = 0;
 
 
     public static Team getTeam()
@@ -211,13 +210,13 @@ public class BattleScene extends Scene
         selectedInfantry.remove(infantry);
         infantry.setSelectedByMouse(false);
     }
-
+    public void sendObject(GameObject object)
+    {
+        send.sendObject(object);
+    }
     public static long syncedCurrentTime()
     {
-        if (getTeam() == Team.Red)
-            return System.currentTimeMillis() - netWorkDeltaTime;
-        else
-            return System.currentTimeMillis();
+        return System.currentTimeMillis();
     }
 
     private void updateReceive()
@@ -226,10 +225,20 @@ public class BattleScene extends Scene
         {
             GameObject obj = receive.nextObject();
 
+            if (obj instanceof DamageInfo)
+            {
+               DamageInfo di = (DamageInfo)obj;
+               for (GameObject object : handler.getObjects())
+                   if (object.hashCode() == di.targetHashCode && object instanceof Battleable)
+                   {
+                       ((Battleable) object).applyDamage(null, di.damage);
+                       break;
+                   }
+                continue;
+            }
             if (obj instanceof CheckGameObject)
             {
                 CheckGameObject chk = (CheckGameObject) obj;
-                netWorkDeltaTime = System.currentTimeMillis() - chk.syncTime;
  /*               System.out.print(chk.a);
                 if (chk.team == Team.Red) System.out.print("Red");
                 else if (chk.team == Team.Blue) System.out.print("Blue");

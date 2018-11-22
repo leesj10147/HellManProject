@@ -12,5 +12,6 @@ public enum ID implements Serializable
     Barrier,
     Bullet,
     Nexus,
-    NetworkChecker
+    NetworkChecker,
+    DamageInfo
 }
