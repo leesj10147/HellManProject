@@ -22,7 +22,7 @@ public class ShadowPenetrationInfantry extends BasicInfantry
         this.hp = 20;
         this.speed = 18;
         this.nowPosition = team;
-        this.inputTeamPositionTime = System.currentTimeMillis();
+        this.inputTeamPositionTime = BattleScene.syncedCurrentTime();
         this.nowPosition = team;
     }
 
@@ -49,7 +49,7 @@ public class ShadowPenetrationInfantry extends BasicInfantry
             if (now != nowPosition)
             {
                 nowPosition = now;
-                inputTeamPositionTime = System.currentTimeMillis();
+                inputTeamPositionTime = BattleScene.syncedCurrentTime();
             }
         }
         if (this.hp <= 0) handler.removeObject(this);
@@ -65,7 +65,7 @@ public class ShadowPenetrationInfantry extends BasicInfantry
     @Override
     public void render(Graphics2D g2d)
     {
-        if (nowPosition != this.team && System.currentTimeMillis() - inputTeamPositionTime <= notSeeTime)
+        if (nowPosition != this.team && BattleScene.syncedCurrentTime() - inputTeamPositionTime <= notSeeTime)
         {
             float alpha = 0.1f;
             if (this.team != BattleScene.getTeam()) alpha = 0;

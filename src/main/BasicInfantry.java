@@ -22,6 +22,7 @@ public class BasicInfantry extends GameObject implements Battleable
     public double MAX_HP;
     protected transient BufferedImage image;
     protected transient BufferedImage originalImage;
+
     public double getHp()
     {
         return hp;
@@ -99,7 +100,7 @@ public class BasicInfantry extends GameObject implements Battleable
         this.delayBetweenAttack = 333;
         this.team = team;
         this.hp = MAX_HP;
-        this.attackRange = 5;
+        this.attackRange = 15;
         this.MAX_HP = MAX_HP;
 
     }
@@ -115,8 +116,7 @@ public class BasicInfantry extends GameObject implements Battleable
             if (selectedByMouse)
             {
                 image = GameManager.setEdge(originalImage, Color.green);
-            }
-            else image = originalImage;
+            } else image = originalImage;
         }
         if (!notAttack)
         {
@@ -128,10 +128,10 @@ public class BasicInfantry extends GameObject implements Battleable
             {
                 BasicInfantry infantry = (BasicInfantry) object;
                 if (!infantry.ignoreCollision && infantry.team != this.team && getAttackBounds().intersects(infantry.getBounds()) &&
-                            System.currentTimeMillis() - lastAttackTime >= delayBetweenAttack)
+                            BattleScene.syncedCurrentTime() - lastAttackTime >= delayBetweenAttack)
                 {
                     this.attack(infantry);
-                    lastAttackTime = System.currentTimeMillis();
+                    lastAttackTime = BattleScene.syncedCurrentTime();
                 }
             }
 

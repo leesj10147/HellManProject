@@ -31,7 +31,7 @@ public class NeukinShamanInfantry extends BasicInfantry
         this.image = image;
         this.originalImage = image;
     }
-    private long lastTime = System.currentTimeMillis();
+    private long lastTime = 0;
 
     @Override
     public void tick()
@@ -43,7 +43,7 @@ public class NeukinShamanInfantry extends BasicInfantry
             handler.removeObject(this);
             return;
         }
-        long nowTime = System.currentTimeMillis();
+        long nowTime = BattleScene.syncedCurrentTime();
         if (nowTime - lastTime <= 3000) return;
         lastTime = nowTime;
         ArrayList<GameObject> infantries = handler.findObjectsById(ID.Infantry);

@@ -14,12 +14,11 @@ public class CheckGameObject extends GameObject
 
     public final Team team;
     public ArrayList<String> list;
-    public int a;
+    public long syncTime;
     public CheckGameObject(Handler handler, Team team)
     {
         this(Integer.MAX_VALUE, Integer.MAX_VALUE, 0, 0, ID.NetworkChecker, handler, team);
-        this.a = (int)(Math.random() * 100);
-        if (team ==Team.Red) this.a += 10000;
+        this.syncTime = System.currentTimeMillis();
     }
 
     private CheckGameObject(double x, double y, int WIDTH, int HEIGHT, ID id, Handler handler, Team team)

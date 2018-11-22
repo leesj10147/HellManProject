@@ -14,12 +14,12 @@ public class NormalInfantry extends BasicInfantry
 
     public NormalInfantry(Team team, double x, double y, BufferedImage image, ID id, Handler handler, int renderOrder)
     {
-        super(team, 30, x, y, image, id, handler, renderOrder);
+        super(team, 200, x, y, image, id, handler, renderOrder);
     }
 
     protected NormalInfantry(Team team, double x, double y, int WIDTH, int HEIGHT, ID id, Handler handler, int renderOrder)
     {
-        super(team, 30, x, y, WIDTH, HEIGHT, id, handler, renderOrder);
+        super(team, 200, x, y, WIDTH, HEIGHT, id, handler, renderOrder);
     }
     @Override
     public void tick()
