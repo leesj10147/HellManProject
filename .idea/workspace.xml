@@ -6,60 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="audio wav&#10;correct BasicBarrier's something wrong code">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="make Network more efficient &#10;add Barrier">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/GameManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/GameObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/HUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/HUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/Handler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/ID.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/ID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/KeyInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/KeyInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/MouseInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/MouseInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/RenderOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/RenderOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/Scene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/Scene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/Vector2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/Vector2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BasicBarrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BasicBarrier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BasicInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BasicInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BasicTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BasicTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BattleHUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BattleHUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene$1MyDialogPopup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene$1MyDialogPopup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/Battleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/Battleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/Bullet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/GoblinGangInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/GoblinGangInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/GoblinGangMiniInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/GoblinGangMiniInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/HeavyArmorInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/HeavyArmorInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/MagicianInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/MagicianInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/NeukinShamanInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/NeukinShamanInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/NormalInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/NormalInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/ShadowPenetrationInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/ShadowPenetrationInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/SkeletonBombInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/SkeletonBombInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/Team.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/network/CheckGameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/network/CheckGameObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/network/Receive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/network/Receive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/network/Send.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/network/Send.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/network/TcpReceive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/network/TcpReceive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/network/TcpSend.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/network/TcpSend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/BasicEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/BasicEnemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/BossEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/BossEnemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/MenuScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/MenuScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/PlayHUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/PlayHUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/PlayScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/PlayScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/RandomBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/RandomBullet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/TraceEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/TraceEnemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/Trail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/Trail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/BasicBarrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BasicBarrier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/BasicInfantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BasicInfantry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/BattleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BattleScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Bullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Nexus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Nexus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/network/CheckGameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/CheckGameObject.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -151,13 +99,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="10013" />
-          <entry key="txt" value="249" />
+          <entry key="txt" value="310" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="10013" />
-          <entry key="PLAIN_TEXT" value="249" />
+          <entry key="PLAIN_TEXT" value="310" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -189,7 +137,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/core/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
+            <state relative-caret-position="177">
               <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
             </state>
           </provider>
@@ -616,7 +564,7 @@
       <workItem from="1542843162757" duration="20000" />
       <workItem from="1542850229016" duration="7044000" />
       <workItem from="1542874470860" duration="16637000" />
-      <workItem from="1542932585984" duration="296000" />
+      <workItem from="1542932585984" duration="857000" />
     </task>
     <task id="LOCAL-00001" summary="lowed NetWork Tick speed">
       <created>1542807468086</created>
@@ -667,17 +615,24 @@
       <option name="project" value="LOCAL" />
       <updated>1542885916134</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="make Network more efficient &#10;add Barrier">
+      <created>1542932956556</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1542932956556</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271426000" />
+    <option name="totallyTimeSpent" value="271987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17537314" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17537314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -686,7 +641,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32904884" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.3669924" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.3669924" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -751,7 +706,8 @@
     <MESSAGE value="sync NetWork error correct" />
     <MESSAGE value="add MoneyMakerInfantry&#10;something added" />
     <MESSAGE value="audio wav&#10;correct BasicBarrier's something wrong code" />
-    <option name="LAST_COMMIT_MESSAGE" value="audio wav&#10;correct BasicBarrier's something wrong code" />
+    <MESSAGE value="make Network more efficient &#10;add Barrier" />
+    <option name="LAST_COMMIT_MESSAGE" value="make Network more efficient &#10;add Barrier" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../HellMan/Let's Build a Game/src/main/MagicianInfantry.java" />
@@ -863,6 +819,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -986,7 +945,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
+        <state relative-caret-position="177">
           <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
         </state>
       </provider>
