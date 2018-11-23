@@ -39,10 +39,18 @@ public class BattleScene extends Scene
         setInfo();
         Nexus test6;
         if (team == Team.Red)
-            test6 = new Nexus(team, 1000, 1000, GameManager.loadImage("cannon.png"), ID.Nexus, handler, RenderOrder.ForeGround.order);
-        else
-            test6 = new Nexus(team, 0, 0, GameManager.loadImage("cannon.png"), ID.Nexus, handler, RenderOrder.ForeGround.order);
+        {
+            test6 = new Nexus(team, 1000, 1000, GameManager.loadImage("cannon.png"), ID.Nexus, handler, 3000);
+            handler.addObject(new Mine(team, 1400, 1400,GameManager.loadImage("mine.png"), ID.Barrier, handler, 3000));
+
+
+        } else
+        {
+            test6 = new Nexus(team, 0, 0, GameManager.loadImage("cannon.png"), ID.Nexus, handler, 3000);
+            handler.addObject(new Mine(team, 400, 400,GameManager.loadImage("mine.png"), ID.Barrier, handler, 3000));
+        }
         handler.addObject(test6);
+
         sectors = new Rectangle[9];
         teamOfSector = new Team[9];
         for (int i = 0; i < 9; ++i)
@@ -210,10 +218,12 @@ public class BattleScene extends Scene
         selectedInfantry.remove(infantry);
         infantry.setSelectedByMouse(false);
     }
+
     public void sendObject(GameObject object)
     {
         send.sendObject(object);
     }
+
     public static long syncedCurrentTime()
     {
         return System.currentTimeMillis();
@@ -227,13 +237,13 @@ public class BattleScene extends Scene
 
             if (obj instanceof DamageInfo)
             {
-               DamageInfo di = (DamageInfo)obj;
-               for (GameObject object : handler.getObjects())
-                   if (object.hashCode() == di.targetHashCode && object instanceof Battleable)
-                   {
-                       ((Battleable) object).applyDamage(null, di.damage);
-                       break;
-                   }
+                DamageInfo di = (DamageInfo) obj;
+                for (GameObject object : handler.getObjects())
+                    if (object.hashCode() == di.targetHashCode && object instanceof Battleable)
+                    {
+                        ((Battleable) object).applyDamage(null, di.damage);
+                        break;
+                    }
                 continue;
             }
             if (obj instanceof CheckGameObject)
@@ -271,18 +281,21 @@ public class BattleScene extends Scene
                 {
                     if (obj instanceof BasicBarrier)
                     {
-                        if (obj.getWIDTH() < obj.getHEIGHT())
+                        if (obj instanceof Mine)
+                        {
+                            infantry.originalImage = GameManager.loadImage("mine.png");
+                            infantry.image = GameManager.loadImage("mine.png");
+                        }
+                        else if (obj.getWIDTH() < obj.getHEIGHT())
                         {
                             infantry.originalImage = GameManager.loadImage("colBarrier.png");
                             infantry.image = GameManager.loadImage("colBarrier.png");
-                        }
-                        else
+                        } else
                         {
                             infantry.image = GameManager.loadImage("rowBarrier.png");
                             infantry.originalImage = GameManager.loadImage("rowBarrier.png");
                         }
-                    }
-                    else
+                    } else
                     {
                         infantry.originalImage = GameManager.loadImage("cannon.png");
                         infantry.image = GameManager.loadImage("cannon.png");
