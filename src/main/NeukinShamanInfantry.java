@@ -21,7 +21,7 @@ public class NeukinShamanInfantry extends BasicInfantry
         this.damage = 0;
         this.attackRange = 3;
         this.delayBetweenAttack = Integer.MAX_VALUE;
-        this.hp = 40;
+        this.hp = 30;
         this.speed = 10;
         this.notAttack = true;
     }
