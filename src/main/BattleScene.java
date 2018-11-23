@@ -40,14 +40,16 @@ public class BattleScene extends Scene
         Nexus test6;
         if (team == Team.Red)
         {
-            test6 = new Nexus(team, 1000, 1000, GameManager.loadImage("cannon.png"), ID.Nexus, handler, 3000);
-            handler.addObject(new Mine(team, 1400, 1400,GameManager.loadImage("mine.png"), ID.Barrier, handler, 3000));
-
-
+            test6 = new Nexus(team, 100, 100, GameManager.loadImage("cannon.png"), ID.Nexus, handler, 3000);
+            handler.addObject(new Mine(team, 500, 500, GameManager.loadImage("mine.png"), ID.Barrier, handler, 3000));
+            handler.addObject(new Farm(team, 100, 500, GameManager.loadImage("farm.png"), ID.Barrier, handler, 3000));
+            handler.addObject(new OdaMine(team, 500, 100, GameManager.loadImage("odamine.png"), ID.Barrier, handler, 3000));
         } else
         {
-            test6 = new Nexus(team, 0, 0, GameManager.loadImage("cannon.png"), ID.Nexus, handler, 3000);
-            handler.addObject(new Mine(team, 400, 400,GameManager.loadImage("mine.png"), ID.Barrier, handler, 3000));
+            test6 = new Nexus(team, 4000, 2770, GameManager.loadImage("cannon.png"), ID.Nexus, handler, 3000);
+            handler.addObject(new Mine(team, 3600, 2370, GameManager.loadImage("mine.png"), ID.Barrier, handler, 3000));
+            handler.addObject(new Farm(team, 4000, 2370, GameManager.loadImage("farm.png"), ID.Barrier, handler, 3000));
+            handler.addObject(new OdaMine(team, 3600, 2770, GameManager.loadImage("odamine.png"), ID.Barrier, handler, 3000));
         }
         handler.addObject(test6);
 
@@ -285,8 +287,15 @@ public class BattleScene extends Scene
                         {
                             infantry.originalImage = GameManager.loadImage("mine.png");
                             infantry.image = GameManager.loadImage("mine.png");
-                        }
-                        else if (obj.getWIDTH() < obj.getHEIGHT())
+                        } else if (obj instanceof Farm)
+                        {
+                            infantry.originalImage = GameManager.loadImage("farm.png");
+                            infantry.image = GameManager.loadImage("farm.png");
+                        } else if (obj instanceof OdaMine)
+                        {
+                            infantry.originalImage = GameManager.loadImage("odamine.png");
+                            infantry.image = GameManager.loadImage("odamine.png");
+                        } else if (obj.getWIDTH() < obj.getHEIGHT())
                         {
                             infantry.originalImage = GameManager.loadImage("colBarrier.png");
                             infantry.image = GameManager.loadImage("colBarrier.png");
@@ -352,6 +361,7 @@ public class BattleScene extends Scene
     {
         //Server :  receive -> send
         //Client : send -> receive
+
         if (team == Team.Red)
         {
             updateReceive();
@@ -447,9 +457,9 @@ public class BattleScene extends Scene
         }
         Point p = MouseInput.getLocation();
         if (p.x <= 0) cameraX -= 50;
-        else if (p.x >= Game.WIDTH-1) cameraX += 50;
+        else if (p.x >= Game.WIDTH - 1) cameraX += 50;
         if (p.y <= 0) cameraY -= 50;
-        else if (p.y >= Game.HEIGHT-1) cameraY += 50;
+        else if (p.y >= Game.HEIGHT - 1) cameraY += 50;
     }
 
     public static Point getOnMapLocation(Point p)

@@ -30,7 +30,7 @@ public class OdaMine extends BasicBarrier
             {
                 if (((MoneyMakerInfantry) obj).team != this.team) continue;
                 ((MoneyMakerInfantry) obj).odamant+=1;
-                GameManager.playSound("sound/채집사운드4.wav", false);
+                GameManager.playSound("sound/채집sound4.wav", false);
             }
         }
     }

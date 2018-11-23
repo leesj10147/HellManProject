@@ -30,7 +30,7 @@ public class Farm extends BasicBarrier
             {
                 if (((MoneyMakerInfantry) obj).team != this.team) continue;
                 ((MoneyMakerInfantry) obj).crop+=2;
-                GameManager.playSound("sound/채집사운드3.wav", false);
+                GameManager.playSound("sound/채집sound3.wav", false);
             }
         }
     }
