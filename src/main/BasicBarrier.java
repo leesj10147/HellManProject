@@ -1,6 +1,5 @@
 package main;
 
-import core.GameObject;
 import core.Handler;
 import core.ID;
 import core.RenderOrder;
@@ -20,14 +19,23 @@ public class BasicBarrier extends BasicTower
         super(team, x, y, WIDTH, HEIGHT, id, handler, renderOrder);
         this.hp = 1000;
         this.notAttack = true;
-
+        this.printBottom = false;
     }
-
+    @Override
+    public void attack(Battleable target)
+    {
+        return;
+    }
     public BasicBarrier(Team team, double x, double y, BufferedImage image, ID id, Handler handler, int renderOrder)
     {
         this(team, x, y, image.getWidth(), image.getHeight(), id, handler, renderOrder);
         this.image = image;
         this.originalImage = image;
+    }
+    @Override
+    public Rectangle getBounds()
+    {
+        return new Rectangle((int) x , (int) y, WIDTH, HEIGHT );
     }
 
 }

@@ -24,6 +24,7 @@ public class BasicInfantry extends GameObject implements Battleable
     protected transient BufferedImage image;
     protected transient BufferedImage originalImage;
     protected String attackSound = "";
+
     public double getHp()
     {
         return hp;
@@ -82,6 +83,14 @@ public class BasicInfantry extends GameObject implements Battleable
         for (int i = 0; i < object.size(); ++i)
         {
             GameObject temp = object.get(i);
+            if (temp instanceof BasicBarrier)
+            {
+                if (this.x > temp.getX()) this.x += Math.abs(velX);
+                else this.x -= Math.abs(velX);
+                if (this.y > temp.getY()) this.y += Math.abs(velY);
+                else this.y -= Math.abs(velY);
+                return;
+            }
             Vector2 v = this.getMidPoint();
             v.add(-temp.getMidPoint().x, -temp.getMidPoint().y);
             double len = (velX * velX + velY * velY + 300) / v.magnitude();
@@ -121,12 +130,11 @@ public class BasicInfantry extends GameObject implements Battleable
         }
         if (!notAttack)
         {
-            ArrayList<GameObject> infatries = handler.findObjectsById(ID.Infantry);
-            infatries.addAll(handler.findObjectsById(ID.Tower));
-            infatries.addAll(handler.findObjectsById(ID.Nexus));
+            ArrayList<GameObject> infatries = handler.Collide(getAttackBounds());
             //velY = velX = 0;
             for (GameObject object : infatries)
             {
+                if (!(object instanceof BasicInfantry)) continue;
                 BasicInfantry infantry = (BasicInfantry) object;
                 if (!infantry.ignoreCollision && infantry.team != this.team && getAttackBounds().intersects(infantry.getBounds()) &&
                             BattleScene.syncedCurrentTime() - lastAttackTime >= delayBetweenAttack)
@@ -243,16 +251,18 @@ public class BasicInfantry extends GameObject implements Battleable
         rect.height += 2 * attackRange;
         return rect;
     }
+
     //어텍은 내 컴퓨터가
     public void attack(Battleable target)
     {
         if (this.team != BattleScene.getTeam()) return;
-        if (GameManager.scene instanceof  BattleScene)
+        if (GameManager.scene instanceof BattleScene)
         {
             ((BattleScene) GameManager.scene).sendObject(new DamageInfo(target.hashCode(), this.damage));
         }
         GameManager.playSound(attackSound, false);
     }
+
     //어플라이 데미지는 상대편 컴퓨터가
     @Override
     public void applyDamage(Battleable attacker, double damage)

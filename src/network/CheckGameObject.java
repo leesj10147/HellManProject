@@ -3,6 +3,7 @@ package network;
 import core.GameObject;
 import core.Handler;
 import core.ID;
+import main.BattleScene;
 import main.Team;
 
 import java.awt.*;
@@ -31,7 +32,6 @@ public class CheckGameObject extends GameObject
             set.forEach(a -> list.add(a.distinguish.substring(3)));
         else
             set.forEach(a -> list.add(a.distinguish.substring(4)));
-
     }
 
     @Override

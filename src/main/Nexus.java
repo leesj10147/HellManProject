@@ -27,6 +27,9 @@ public class Nexus extends BasicTower implements Battleable
         itemList[3] = "BasicInfantry.png";
         itemList[4] = "BasicInfantry.png";
         itemList[5] = "BasicInfantry.png";
+        itemList[6] = "rowBarrier.png";
+        itemList[7] = "colBarrier.png";
+        itemList[8] = "colBarrier.png";
 
         itemDescription[0] = "이 친구는 주변의 광산, 농장, 제련소에서 노동을 하며 돈을 벌 수 있습니다.";
         itemDescription[1] = "적절한 사거리와 적절한 데미지를 가지고, 적절한 크기와 함께 적절한 아름다움을 가진 적절한 대포입니다.\n 적절한 가격으로 적절하게 지을 수 있습니다.";
@@ -34,6 +37,9 @@ public class Nexus extends BasicTower implements Battleable
         itemDescription[3] = "하나는 약하지만, 모이면 강력합니다! 3인조로 뭉쳐 다니는 이 골칫거리들은 하는 짓마다 얄밉기짝이 없다고 하더군요.";
         itemDescription[4] = "그림자같이 은밀하고 빠르게 침투한다고 하여 그림자 침투병이 되었습니다.\n하지만, 걸친 게 천쪼가리뿐이라 너무나도 연약한 존재이기도 합니다.";
         itemDescription[5] = "사막잡신 \'느킨\'을 믿는 부족의 주술사입니다. 이교도라고는 하지만, 아군들의 체력을 채워주는 실력은 그 누구도 부정할 수 없을 만큼 확실합니다.";
+        itemDescription[6] = "가로 방어막 입니다. 아무 공격도 하지 않으며, 길을 막아주는 역할만 합니다.";
+        itemDescription[7] = "세로 방어막 입니다. 아무 공격도 하지 않으며, 길을 막아주는 역할만 합니다.";
+        itemDescription[8] = "";
         this.printBottom = false;
     }
 
@@ -91,8 +97,10 @@ public class Nexus extends BasicTower implements Battleable
             {
                 if (itemNumberOfSelectedUnit == 1)
                     handler.addObject(new BasicTower(this.team, p.x, p.y, itemImage, ID.Tower, handler, RenderOrder.Main.order));
-
-
+                else if (itemNumberOfSelectedUnit == 6)
+                    handler.addObject(new BasicBarrier(this.team, p.x, p.y, itemImage, ID.Barrier, handler, RenderOrder.ForeGround.order));
+                else if (itemNumberOfSelectedUnit == 7)
+                    handler.addObject(new BasicBarrier(this.team, p.x, p.y, itemImage, ID.Barrier, handler, RenderOrder.ForeGround.order));
                 selectedArrangementUnit = false;
             }
         }
@@ -120,6 +128,18 @@ public class Nexus extends BasicTower implements Battleable
             } else if (rect[5].contains(mouseClickedOnMapLocation))
             {
                 handler.addObject(new NeukinShamanInfantry(team, this.x + this.getWIDTH(), this.y + this.getHEIGHT(), GameManager.loadImage(itemList[5]), ID.Infantry, handler, RenderOrder.Main.order));
+            } else if (rect[6].contains(mouseClickedOnMapLocation))
+            {
+                imageArrangementUnit = itemList[6];
+                selectedArrangementUnit = true;
+                itemNumberOfSelectedUnit = 6;
+                this.mouseClickedOnMapLocation = new Point(Integer.MAX_VALUE, Integer.MAX_VALUE);
+            } else if (rect[7].contains(mouseClickedOnMapLocation))
+            {
+                imageArrangementUnit = itemList[7];
+                selectedArrangementUnit = true;
+                itemNumberOfSelectedUnit = 7;
+                this.mouseClickedOnMapLocation = new Point(Integer.MAX_VALUE, Integer.MAX_VALUE);
             }
             Point p = BattleScene.getOnMapLocation(MouseInput.getLocation());
             boolean contain = false;
@@ -139,6 +159,7 @@ public class Nexus extends BasicTower implements Battleable
 
     private Font textFont = new Font("Serif", Font.BOLD, 15);
     private Font moneyFont = new Font("Serif", Font.BOLD, 30);
+
     @Override
     public void render(Graphics2D g2d)
     {
@@ -184,11 +205,11 @@ public class Nexus extends BasicTower implements Battleable
         }
         g2d.setFont(moneyFont);
         g2d.setColor(Color.orange);
-        g2d.drawString("Gold : " + gold, BattleScene.getCameraX() + 500, BattleScene.getCameraY()+150);
+        g2d.drawString("Gold : " + gold, BattleScene.getCameraX() + 500, BattleScene.getCameraY() + 150);
         g2d.setColor(Color.orange);
-        g2d.drawString("Crop : " + crop, BattleScene.getCameraX() + 800, BattleScene.getCameraY()+150);
+        g2d.drawString("Crop : " + crop, BattleScene.getCameraX() + 800, BattleScene.getCameraY() + 150);
         g2d.setColor(Color.BLUE);
-        g2d.drawString("Odamant : " + odamant, BattleScene.getCameraX() + 1100, BattleScene.getCameraY()+150);
+        g2d.drawString("Odamant : " + odamant, BattleScene.getCameraX() + 1100, BattleScene.getCameraY() + 150);
     }
 
     @Override

@@ -47,7 +47,7 @@ public class Bullet extends GameObject implements Battleable
             }
         }
         Vector2 now = new Vector2(x + WIDTH / 2, y + HEIGHT / 2);
-        if (new Rectangle((int)x, (int)y, getWIDTH(), getHEIGHT()).contains(target.getPoint()))
+        if (new Rectangle((int)x - 20, (int)y-20, getWIDTH()+40, getHEIGHT()+40).contains(target.getPoint()))
         {
             handler.removeObject(this);
         }

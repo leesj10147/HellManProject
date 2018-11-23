@@ -249,6 +249,7 @@ public class BattleScene extends Scene
                 for (GameObject object : chkTeam)
                 {
                     String toChk = object.distinguish.substring(chk.team == Team.Red ? 3 : 4);
+
                     if (chk.list.contains(toChk)) continue;
                     handler.getObjects().remove(object);
                 }
@@ -268,8 +269,24 @@ public class BattleScene extends Scene
                     obj.setSelectedByMouse(false);
                 if (obj instanceof BasicTower)
                 {
-                    infantry.originalImage = GameManager.loadImage("cannon.png");
-                    infantry.image = GameManager.loadImage("cannon.png");
+                    if (obj instanceof BasicBarrier)
+                    {
+                        if (obj.getWIDTH() < obj.getHEIGHT())
+                        {
+                            infantry.originalImage = GameManager.loadImage("colBarrier.png");
+                            infantry.image = GameManager.loadImage("colBarrier.png");
+                        }
+                        else
+                        {
+                            infantry.image = GameManager.loadImage("rowBarrier.png");
+                            infantry.originalImage = GameManager.loadImage("rowBarrier.png");
+                        }
+                    }
+                    else
+                    {
+                        infantry.originalImage = GameManager.loadImage("cannon.png");
+                        infantry.image = GameManager.loadImage("cannon.png");
+                    }
                 } else
                 {
                     infantry.originalImage = GameManager.loadImage("BasicInfantry.png");

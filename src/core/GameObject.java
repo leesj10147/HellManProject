@@ -2,6 +2,8 @@ package core;
 
 import main.BattleScene;
 import main.Team;
+import network.CheckGameObject;
+import network.DamageInfo;
 
 import java.awt.*;
 import java.io.Serializable;
@@ -66,7 +68,7 @@ public abstract class GameObject implements Comparable, Serializable
         this(x, y, WIDTH, HEIGHT, id, handler, RenderOrder.Default.order);
     }
 
-    private static int serial = 0;
+    private static int serial = 10;
     public final String distinguish;
 
     public GameObject(double x, double y, int WIDTH, int HEIGHT, ID id, Handler handler, int renderOrder)
@@ -79,6 +81,18 @@ public abstract class GameObject implements Comparable, Serializable
         this.WIDTH = WIDTH;
         this.HEIGHT = HEIGHT;
         this.mouseClickedOnMapLocation = new Point(Integer.MAX_VALUE, Integer.MAX_VALUE);
+        if (this instanceof CheckGameObject)
+        {
+            if (BattleScene.getTeam() == Team.Red) distinguish = "Red0";
+            else distinguish = "Blue0";
+            return;
+        }
+        if (this instanceof DamageInfo)
+        {
+            if (BattleScene.getTeam() == Team.Red) distinguish = "Red1";
+            else distinguish = "Blue1";
+            return;
+        }
         if (BattleScene.getTeam() == Team.Red) distinguish = "Red" + serial;
         else distinguish = "Blue" + serial;
         serial++;
