@@ -22,6 +22,7 @@ public class NeukinShamanInfantry extends BasicInfantry
         this.attackRange = 3;
         this.delayBetweenAttack = Integer.MAX_VALUE;
         this.hp = 30;
+        this.MAX_HP = 30;
         this.speed = 10;
         this.notAttack = true;
     }
@@ -53,7 +54,7 @@ public class NeukinShamanInfantry extends BasicInfantry
         {
             if (object == this) continue;
             BasicInfantry infantry = (BasicInfantry) object;
-            if (infantry.getMidPoint().distance(this.getMidPoint()) < 100)
+            if (infantry.getMidPoint().distance(this.getMidPoint()) < 300)
                 if (infantry.team == this.team) infantry.hp = Math.min(infantry.hp + 3, infantry.MAX_HP);
         }
     }

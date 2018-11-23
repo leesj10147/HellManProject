@@ -56,7 +56,7 @@ public class GoblinGangInfantry extends BasicInfantry
     {
         super.tick();
         if (this.myGroup.size() == 0) handler.removeObject(this);
-        if (destination != null)
+        /*if (destination != null)
         {
             double distsum = 0;
             for (GoblinGangMiniInfantry g : myGroup)
@@ -77,7 +77,7 @@ public class GoblinGangInfantry extends BasicInfantry
             {
                 g.notMove = true;
                 g.destination = null;
-            }
+            }*/
     }
 
     public void render(Graphics2D g2d)

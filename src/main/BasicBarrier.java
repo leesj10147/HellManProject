@@ -18,6 +18,7 @@ public class BasicBarrier extends BasicTower
     {
         super(team, x, y, WIDTH, HEIGHT, id, handler, renderOrder);
         this.hp = 1000;
+        this.MAX_HP = 1000;
         this.notAttack = true;
         this.printBottom = false;
     }

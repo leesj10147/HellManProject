@@ -80,9 +80,8 @@ public class BasicInfantry extends GameObject implements Battleable
                 return;
             }
         }
-        for (int i = 0; i < object.size(); ++i)
+        for (GameObject temp : object)
         {
-            GameObject temp = object.get(i);
             if (temp instanceof BasicBarrier)
             {
                 if (this.x > temp.getX()) this.x += Math.abs(velX);
@@ -91,6 +90,11 @@ public class BasicInfantry extends GameObject implements Battleable
                 else this.y -= Math.abs(velY);
                 return;
             }
+
+        }
+        for (int i = 0; i < object.size(); ++i)
+        {
+            GameObject temp = object.get(i);
             Vector2 v = this.getMidPoint();
             v.add(-temp.getMidPoint().x, -temp.getMidPoint().y);
             double len = (velX * velX + velY * velY + 300) / v.magnitude();

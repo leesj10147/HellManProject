@@ -76,6 +76,7 @@ public class Bullet extends GameObject implements Battleable
     {
         target.applyDamage(this, damage);
         GameManager.playSound("sound\\hit-sound2.wav", false);
+        handler.removeObject(this);
     }
     @Override
     public void applyDamage(Battleable attacker, double damage)
