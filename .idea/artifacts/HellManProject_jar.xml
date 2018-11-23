@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HellManProject:jar">
+    <output-path>$PROJECT_DIR$/ExeJar</output-path>
+    <root id="archive" name="HellManProject.jar">
+      <element id="module-output" name="HellManProject" />
+    </root>
+  </artifact>
+</component>
