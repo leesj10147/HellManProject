@@ -6,18 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="기본광산 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/Farm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/OdaMine.java" afterDir="false" />
+    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="농장, 오다만트 광산&#10;Nexus에 방어병 추가&#10;공격력 밸런스패치">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/GameManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BasicTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BasicTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/HeavyArmorInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/HeavyArmorInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/MagicianInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/MagicianInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/HeavyArmorInfantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HeavyArmorInfantry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MagicianInfantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MagicianInfantry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Nexus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Nexus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/BattleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BattleScene.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,25 +91,25 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MF" value="1" />
-          <entry key="java" value="125" />
+          <entry key="java" value="127" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="125" />
+          <entry key="JAVA" value="127" />
           <entry key="Manifest" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11556" />
-          <entry key="txt" value="439" />
+          <entry key="java" value="11729" />
+          <entry key="txt" value="482" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11556" />
-          <entry key="PLAIN_TEXT" value="439" />
+          <entry key="JAVA" value="11729" />
+          <entry key="PLAIN_TEXT" value="482" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -127,11 +120,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="292" column="30" lean-forward="true" selection-start-line="292" selection-start-column="30" selection-end-line="292" selection-end-column="30" />
+            <state relative-caret-position="446">
+              <caret line="447" column="43" selection-start-line="447" selection-start-column="43" selection-end-line="447" selection-end-column="43" />
               <folding>
                 <element signature="e#7250#7251#0" expanded="true" />
                 <element signature="e#7289#7290#0" expanded="true" />
@@ -140,6 +133,24 @@
                 <element signature="e#15823#15824#0" expanded="true" />
                 <element signature="e#15885#15886#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/Window.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -154,15 +165,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/NeukinShamanInfantry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
-              <caret line="56" column="71" selection-start-line="56" selection-start-column="71" selection-end-line="56" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/BasicTower.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -171,7 +173,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Farm.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
@@ -218,15 +220,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="235">
               <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/BasicInfantry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
             </state>
           </provider>
         </entry>
@@ -300,7 +293,6 @@
         <option value="$PROJECT_DIR$/src/core/PlayScene.java" />
         <option value="$PROJECT_DIR$/src/core/TraceEnemy.java" />
         <option value="$PROJECT_DIR$/src/main/TraceEnemy.java" />
-        <option value="$PROJECT_DIR$/src/core/Window.java" />
         <option value="$PROJECT_DIR$/src/main/MenuScene.java" />
         <option value="$PROJECT_DIR$/src/core/MouseInput.java" />
         <option value="$PROJECT_DIR$/src/main/AttackAble.java" />
@@ -321,7 +313,6 @@
         <option value="$PROJECT_DIR$/src/network/Receive.java" />
         <option value="$PROJECT_DIR$/src/network/TcpReceive.java" />
         <option value="$PROJECT_DIR$/src/network/TcpSend.java" />
-        <option value="$PROJECT_DIR$/src/core/Game.java" />
         <option value="$PROJECT_DIR$/src/network/DamageInfoGameObject.java" />
         <option value="$PROJECT_DIR$/src/core/ID.java" />
         <option value="$PROJECT_DIR$/src/network/DamageInfo.java" />
@@ -336,7 +327,6 @@
         <option value="$PROJECT_DIR$/src/main/NeukinShamanInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/GoblinGangInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/Bullet.java" />
-        <option value="$PROJECT_DIR$/src/main/BattleScene.java" />
         <option value="$PROJECT_DIR$/src/core/GameManager.java" />
         <option value="$PROJECT_DIR$/src/main/Mine.java" />
         <option value="$PROJECT_DIR$/src/main/OdaMine.java" />
@@ -345,6 +335,9 @@
         <option value="$PROJECT_DIR$/src/main/HeavyArmorInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/Nexus.java" />
         <option value="$PROJECT_DIR$/src/main/BasicTower.java" />
+        <option value="$PROJECT_DIR$/src/core/Window.java" />
+        <option value="$PROJECT_DIR$/src/core/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/BattleScene.java" />
       </list>
     </option>
   </component>
@@ -355,8 +348,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="651" />
-    <option name="y" value="62" />
+    <option name="x" value="-609" />
+    <option name="y" value="57" />
     <option name="width" value="1461" />
     <option name="height" value="859" />
   </component>
@@ -418,7 +411,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542978620127" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542980465612" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -585,7 +578,7 @@
       <workItem from="1542850229016" duration="7044000" />
       <workItem from="1542874470860" duration="16637000" />
       <workItem from="1542932585984" duration="4876000" />
-      <workItem from="1542973646053" duration="4886000" />
+      <workItem from="1542973646053" duration="5740000" />
     </task>
     <task id="LOCAL-00001" summary="lowed NetWork Tick speed">
       <created>1542807468086</created>
@@ -692,16 +685,24 @@
       <option name="project" value="LOCAL" />
       <updated>1542976937999</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="농장, 오다만트 광산&#10;Nexus에 방어병 추가&#10;공격력 밸런스패치">
+      <created>1542979596988</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1542979596988</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280892000" />
+    <option name="totallyTimeSpent" value="281746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17697228" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17697228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -710,7 +711,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32904884" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.3669924" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.28773072" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -783,10 +784,10 @@
     <MESSAGE value="마법사원딜 밸런스패치" />
     <MESSAGE value="마법사원딜 밸런스패치&#10;총알 안사라짐버그 수정" />
     <MESSAGE value="기본광산 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="기본광산 추가" />
+    <MESSAGE value="농장, 오다만트 광산&#10;Nexus에 방어병 추가&#10;공격력 밸런스패치" />
+    <option name="LAST_COMMIT_MESSAGE" value="농장, 오다만트 광산&#10;Nexus에 방어병 추가&#10;공격력 밸런스패치" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../HellMan/Let's Build a Game/src/main/SkeletonBombInfantry.java" />
     <entry file="file://$PROJECT_DIR$/../HellMan/Let's Build a Game/src/main/Team.java" />
     <entry file="file://$PROJECT_DIR$/../HellMan/Let's Build a Game/src/main/BasicTower.java" />
     <entry file="file://$PROJECT_DIR$/../HellMan/Let's Build a Game/src/pracmain/Player.java" />
@@ -842,13 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="50" column="14" lean-forward="true" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -977,21 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="292" column="30" lean-forward="true" selection-start-line="292" selection-start-column="30" selection-end-line="292" selection-end-column="30" />
-          <folding>
-            <element signature="e#7250#7251#0" expanded="true" />
-            <element signature="e#7289#7290#0" expanded="true" />
-            <element signature="e#7338#7339#0" expanded="true" />
-            <element signature="e#7387#7388#0" expanded="true" />
-            <element signature="e#15823#15824#0" expanded="true" />
-            <element signature="e#15885#15886#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/BasicInfantry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
@@ -1057,6 +1036,35 @@
           <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="447" column="43" selection-start-line="447" selection-start-column="43" selection-end-line="447" selection-end-column="43" />
+          <folding>
+            <element signature="e#7250#7251#0" expanded="true" />
+            <element signature="e#7289#7290#0" expanded="true" />
+            <element signature="e#7338#7339#0" expanded="true" />
+            <element signature="e#7387#7388#0" expanded="true" />
+            <element signature="e#15823#15824#0" expanded="true" />
+            <element signature="e#15885#15886#0" expanded="true" />
           </folding>
         </state>
       </provider>

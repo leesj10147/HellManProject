@@ -7,8 +7,8 @@ import java.awt.image.BufferStrategy;
 
 public final class Game extends Canvas implements Runnable
 {
-    public static final int WIDTH = 1800;
-    public static final int HEIGHT = 900;
+    public static final int WIDTH = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDisplayMode().getWidth();
+    public static final int HEIGHT = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDisplayMode().getHeight();
     public static final int tickPerSecond = 30;
     private Thread thread;
     private boolean running = false;
@@ -19,12 +19,14 @@ public final class Game extends Canvas implements Runnable
         this.addKeyListener(new KeyInput());
 
         new Window(WIDTH, HEIGHT, this);
+
         handler = new Handler();
         GameManager.handler = handler;
 
         //첫번째 Scene
         GameManager.changeScene(BattleScene.class);
     }
+
     public void start()
     {
         thread = new Thread(this);

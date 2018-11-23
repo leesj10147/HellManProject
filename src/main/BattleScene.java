@@ -447,9 +447,9 @@ public class BattleScene extends Scene
         }
         Point p = MouseInput.getLocation();
         if (p.x <= 0) cameraX -= 50;
-        else if (p.x >= Game.WIDTH) cameraX += 50;
+        else if (p.x >= Game.WIDTH-1) cameraX += 50;
         if (p.y <= 0) cameraY -= 50;
-        else if (p.y >= Game.HEIGHT) cameraY += 50;
+        else if (p.y >= Game.HEIGHT-1) cameraY += 50;
     }
 
     public static Point getOnMapLocation(Point p)
