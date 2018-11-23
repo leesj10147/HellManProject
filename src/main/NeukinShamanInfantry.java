@@ -25,12 +25,14 @@ public class NeukinShamanInfantry extends BasicInfantry
         this.speed = 10;
         this.notAttack = true;
     }
+
     public NeukinShamanInfantry(Team team, double x, double y, BufferedImage image, ID id, Handler handler, int renderOrder)
     {
         this(team, x, y, image.getWidth(), image.getHeight(), id, handler, renderOrder);
         this.image = image;
         this.originalImage = image;
     }
+
     private long lastTime = 0;
 
     @Override
@@ -38,7 +40,7 @@ public class NeukinShamanInfantry extends BasicInfantry
     {
         super.tick();
         moveToNotIntersection();
-        if (this.hp<=0)
+        if (this.hp <= 0)
         {
             handler.removeObject(this);
             return;
@@ -52,7 +54,7 @@ public class NeukinShamanInfantry extends BasicInfantry
             if (object == this) continue;
             BasicInfantry infantry = (BasicInfantry) object;
             if (infantry.getMidPoint().distance(this.getMidPoint()) < 100)
-            if (infantry.team == this.team) infantry.hp += 3;
+                if (infantry.team == this.team) infantry.hp = Math.min(infantry.hp + 3, infantry.MAX_HP);
         }
     }
 }
