@@ -17,7 +17,7 @@ public class MagicianInfantry extends BasicInfantry
     public MagicianInfantry(Team team, double x, double y, int WIDTH, int HEIGHT, ID id, Handler handler, int renderOrder)
     {
         super(team, 10, x, y, WIDTH, HEIGHT, id, handler, renderOrder);
-        this.damage = 20;
+        this.damage = 15;
         this.attackRange = 300;
         this.hp = 10;
         this.delayBetweenAttack = 1000;
