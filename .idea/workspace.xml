@@ -6,12 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="전체화면 구현">
+    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="넥서스, 농장, 광산 배치">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mine.png" beforeDir="false" afterPath="$PROJECT_DIR$/mine.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/Window.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BasicTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BasicTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene$1MyDialogPopup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene$1MyDialogPopup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/BasicEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/BasicEnemy.class" afterDir="false" />
@@ -20,9 +20,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/PlayScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/PlayScene.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HellManProject/pracmain/RandomBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/pracmain/RandomBullet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/BattleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BattleScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Farm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Farm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/OdaMine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/OdaMine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,25 +101,25 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MF" value="1" />
-          <entry key="java" value="129" />
+          <entry key="java" value="131" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="129" />
+          <entry key="JAVA" value="131" />
           <entry key="Manifest" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="12024" />
-          <entry key="txt" value="492" />
+          <entry key="java" value="12027" />
+          <entry key="txt" value="512" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12024" />
-          <entry key="PLAIN_TEXT" value="492" />
+          <entry key="JAVA" value="12027" />
+          <entry key="PLAIN_TEXT" value="512" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -149,11 +147,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/SkeletonBombInfantry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+            <state relative-caret-position="157">
+              <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/BasicInfantry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1326">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -189,15 +205,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/HeavyArmorInfantry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/BasicTower.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -226,15 +233,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -331,7 +329,6 @@
         <option value="$PROJECT_DIR$/src/network/DamageInfoGameObject.java" />
         <option value="$PROJECT_DIR$/src/core/ID.java" />
         <option value="$PROJECT_DIR$/src/network/DamageInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/MoneyMakerInfantry.java" />
         <option value="$PROJECT_DIR$/src/network/CheckGameObject.java" />
         <option value="$PROJECT_DIR$/src/core/GameObject.java" />
@@ -353,6 +350,7 @@
         <option value="$PROJECT_DIR$/src/main/Farm.java" />
         <option value="$PROJECT_DIR$/src/main/OdaMine.java" />
         <option value="$PROJECT_DIR$/src/main/BattleScene.java" />
+        <option value="$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java" />
       </list>
     </option>
   </component>
@@ -426,7 +424,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542982885736" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542983111760" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -593,7 +591,7 @@
       <workItem from="1542850229016" duration="7044000" />
       <workItem from="1542874470860" duration="16637000" />
       <workItem from="1542932585984" duration="4876000" />
-      <workItem from="1542973646053" duration="8093000" />
+      <workItem from="1542973646053" duration="8317000" />
     </task>
     <task id="LOCAL-00001" summary="lowed NetWork Tick speed">
       <created>1542807468086</created>
@@ -714,17 +712,24 @@
       <option name="project" value="LOCAL" />
       <updated>1542980483918</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="넥서스, 농장, 광산 배치">
+      <created>1542982963634</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1542982963634</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284099000" />
+    <option name="totallyTimeSpent" value="284323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23667377" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23667377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -808,7 +813,8 @@
     <MESSAGE value="기본광산 추가" />
     <MESSAGE value="농장, 오다만트 광산&#10;Nexus에 방어병 추가&#10;공격력 밸런스패치" />
     <MESSAGE value="전체화면 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="전체화면 구현" />
+    <MESSAGE value="넥서스, 농장, 광산 배치" />
+    <option name="LAST_COMMIT_MESSAGE" value="넥서스, 농장, 광산 배치" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../HellMan/Let's Build a Game/src/main/Team.java" />
@@ -852,13 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="32" column="63" selection-start-line="32" selection-start-column="63" selection-end-line="32" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -977,13 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/BasicInfantry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/NeukinShamanInfantry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="708">
@@ -1087,8 +1079,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/SkeletonBombInfantry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        <state relative-caret-position="157">
+          <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/BasicInfantry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
         </state>
       </provider>
     </entry>

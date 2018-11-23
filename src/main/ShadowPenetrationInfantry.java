@@ -18,7 +18,7 @@ public class ShadowPenetrationInfantry extends BasicInfantry
     public ShadowPenetrationInfantry(Team team, double x, double y, int WIDTH, int HEIGHT, ID id, Handler handler, int renderOrder)
     {
         super(team, 2, x, y, WIDTH, HEIGHT, id, handler, renderOrder);
-        this.damage = 30;
+        this.damage = 40;
         this.hp = 20;
         this.speed = 18;
         this.nowPosition = team;
