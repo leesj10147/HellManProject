@@ -14,6 +14,10 @@ public class Handler
     private Queue<GameObject> addList = new LinkedList<>();
     private Queue<GameObject> removeList = new LinkedList<>();
 
+    public Handler()
+    {
+
+    }
     public void tick()
     {
         objects.forEach(GameObject::tick);

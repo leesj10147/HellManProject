@@ -61,7 +61,6 @@ public class BasicTower extends BasicInfantry
         this.destination = new Vector2(Integer.MAX_VALUE, Integer.MAX_VALUE);
 
         super.tick();
-
         if (this.hp <= 0) handler.removeObject(this);
     }
 

@@ -63,7 +63,6 @@ public class ShadowPenetrationInfantry extends BasicInfantry
         }
         else
             isShadow = false;
-
         if (this.hp <= 0) handler.removeObject(this);
     }
 

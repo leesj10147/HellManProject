@@ -25,6 +25,7 @@ public final class Game extends Canvas implements Runnable
 
         //첫번째 Scene
         GameManager.changeScene(BattleScene.class);
+        this.start();
     }
 
     public void start()

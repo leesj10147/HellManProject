@@ -26,6 +26,5 @@ public class Window
         GraphicsDevice gd = ge.getDefaultScreenDevice();
         gd.setFullScreenWindow(frame);
 
-        game.start();
     }
 }
