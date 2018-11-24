@@ -39,11 +39,14 @@ public class ShadowPenetrationInfantry extends BasicInfantry
     private Team nowPosition;
     private int notSeeTime = 3000;
 
+    private boolean isShadow = false;
     @Override
     public void tick()
     {
         super.tick();
         moveToNotIntersection();
+        if (this.team != BattleScene.getTeam()) return;
+
         if (GameManager.scene instanceof BattleScene)
         {
             BattleScene bs = (BattleScene) GameManager.scene;
@@ -54,6 +57,13 @@ public class ShadowPenetrationInfantry extends BasicInfantry
                 inputTeamPositionTime = BattleScene.syncedCurrentTime();
             }
         }
+        if (nowPosition != this.team && BattleScene.syncedCurrentTime() - inputTeamPositionTime <= notSeeTime)
+        {
+            isShadow = true;
+        }
+        else
+            isShadow = false;
+
         if (this.hp <= 0) handler.removeObject(this);
     }
 
@@ -67,10 +77,10 @@ public class ShadowPenetrationInfantry extends BasicInfantry
     @Override
     public void render(Graphics2D g2d)
     {
-        if (nowPosition != this.team && BattleScene.syncedCurrentTime() - inputTeamPositionTime <= notSeeTime)
+        if (isShadow)
         {
             float alpha = 0.1f;
-            if (this.team != BattleScene.getTeam()) alpha = 0;
+            //if (this.team != BattleScene.getTeam()) alpha = 0;
             g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
             super.render(g2d);
             g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1));
