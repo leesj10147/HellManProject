@@ -3,6 +3,19 @@
     <output-path>$PROJECT_DIR$/ExeJar</output-path>
     <root id="archive" name="HellManProject.jar">
       <element id="module-output" name="HellManProject" />
+      <element id="file-copy" path="$PROJECT_DIR$/BasicInfantry.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/rowBarrier.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/redTeam.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/bottom.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/farm.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/colBarrier.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/odamine.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/mine.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/cannon.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/readme.docx" />
+      <element id="file-copy" path="$PROJECT_DIR$/readme.md" />
+      <element id="file-copy" path="$PROJECT_DIR$/greenTeam.png" />
+      <element id="dir-copy" path="$PROJECT_DIR$/sound" />
     </root>
   </artifact>
 </component>
