@@ -326,7 +326,7 @@ public class BattleScene extends Scene
     private void updateSend()
     {
         ++cnt;
-        if (cnt % 10 == 1) return;
+        if (cnt % 9999999 == 1) return;
         TreeSet<GameObject> tosend = handler.getMyTeamObject(team);
         for (GameObject object : tosend)
         {
@@ -337,6 +337,11 @@ public class BattleScene extends Scene
                     handler.removeObject(object);
                     continue;
                 }
+            }
+            if (object instanceof Bullet)
+            {
+                if (((Bullet) object).attacked) handler.removeObject(object);
+                continue;
             }
             send.sendObject(object);
 

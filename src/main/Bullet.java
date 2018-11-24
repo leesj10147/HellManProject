@@ -16,6 +16,7 @@ public class Bullet extends GameObject implements Battleable
     private double speed;
     private double damage;
     public final Team team;
+    public boolean attacked = false;
     public Bullet(Team team, double damage, Vector2 target, double speed, double x, double y, int WIDTH, int HEIGHT, ID id, Handler handler)
     {
         this(team, damage, target, speed, x, y, WIDTH, HEIGHT, id, handler, RenderOrder.Default.order);
@@ -74,9 +75,11 @@ public class Bullet extends GameObject implements Battleable
 
     public void attack(double damage, BasicInfantry target)
     {
+        if (attacked) return;
         target.applyDamage(this, damage);
         GameManager.playSound("sound\\hit-sound2.wav", false);
         handler.removeObject(this);
+        attacked = true;
     }
     @Override
     public void applyDamage(Battleable attacker, double damage)
