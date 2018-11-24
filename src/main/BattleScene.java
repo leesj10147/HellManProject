@@ -330,6 +330,14 @@ public class BattleScene extends Scene
         TreeSet<GameObject> tosend = handler.getMyTeamObject(team);
         for (GameObject object : tosend)
         {
+            if (object instanceof  BasicInfantry)
+            {
+                if (((BasicInfantry) object).hp <= 0)
+                {
+                    handler.removeObject(object);
+                    continue;
+                }
+            }
             send.sendObject(object);
 
         }
