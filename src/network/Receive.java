@@ -9,6 +9,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Receive implements Runnable
 {
@@ -19,7 +20,7 @@ public class Receive implements Runnable
 
     protected int port;
     private DatagramSocket socket;
-    protected Queue<GameObject> queue = new ConcurrentLinkedDeque<>();
+    protected Queue<GameObject> queue = new ConcurrentLinkedQueue<>();
 
     public Receive()
     {

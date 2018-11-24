@@ -7,12 +7,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.TreeSet;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ConcurrentSkipListSet;
 
 public class Handler
 {
-    private java.util.TreeSet<GameObject> objects = new java.util.TreeSet<>();
-    private Queue<GameObject> addList = new LinkedList<>();
-    private Queue<GameObject> removeList = new LinkedList<>();
+    private ConcurrentSkipListSet<GameObject> objects = new ConcurrentSkipListSet<GameObject>();
+    private Queue<GameObject> addList = new ConcurrentLinkedQueue<>();
+    private Queue<GameObject> removeList = new ConcurrentLinkedQueue<>();
 
     public Handler()
     {
@@ -129,7 +131,7 @@ public class Handler
         }
         return result;
     }
-    public java.util.TreeSet<GameObject> getObjects()
+    public ConcurrentSkipListSet<GameObject> getObjects()
     {
         return objects;
     }

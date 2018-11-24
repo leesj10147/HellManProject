@@ -15,6 +15,7 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.TreeSet;
+import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class BattleScene extends Scene
@@ -431,7 +432,7 @@ public class BattleScene extends Scene
 
 
                 isMouseSelected = false;
-                java.util.TreeSet<GameObject> set = handler.getObjects();
+                ConcurrentSkipListSet<GameObject> set = handler.getObjects();
                 Point onMapE = getOnMapLocation(e.getPoint());
                 Rectangle mouseBounds = new Rectangle(onMapStart.x, onMapStart.y, onMapE.x - onMapStart.x, onMapE.y - onMapStart.y);
                 for (GameObject object : set)
