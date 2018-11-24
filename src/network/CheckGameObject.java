@@ -28,7 +28,7 @@ public class CheckGameObject extends GameObject
         super(x, y, WIDTH, HEIGHT, id, handler);
         this.team = team;
         ConcurrentSkipListSet<GameObject> set = handler.getMyTeamObject(team);
-        list = new ArrayList<>(set.size());
+        list = new ArrayList<>();
         if (this.team == Team.Red)
             set.forEach(a -> list.add(a.distinguish.substring(3)));
         else

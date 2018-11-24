@@ -81,7 +81,6 @@ public class Handler
             {
                 if (((Nexus) obj).team == team) ret.add(obj);
             }
-            else ret.add(obj);
         }
         return ret;
     }

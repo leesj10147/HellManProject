@@ -253,18 +253,13 @@ public class BattleScene extends Scene
             if (obj instanceof CheckGameObject)
             {
                 CheckGameObject chk = (CheckGameObject) obj;
- /*               System.out.print(chk.a);
-                if (chk.team == Team.Red) System.out.print("Red");
-                else if (chk.team == Team.Blue) System.out.print("Blue");
-
-                if (getTeam() == Team.Red) System.out.println("  Red");
-                else if (getTeam() == Team.Blue) System.out.println("  Blue");*/
                 ConcurrentSkipListSet<GameObject> chkTeam = handler.getMyTeamObject(chk.team);
                 for (GameObject object : chkTeam)
                 {
                     String toChk = object.distinguish.substring(chk.team == Team.Red ? 3 : 4);
 
                     if (chk.list.contains(toChk)) continue;
+                    System.out.println(toChk + " " + object + " "+object.distinguish);
                     handler.getObjects().remove(object);
                 }
                 continue;
