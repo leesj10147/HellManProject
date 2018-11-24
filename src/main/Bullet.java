@@ -5,6 +5,7 @@ import network.DamageInfo;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Bullet extends GameObject implements Battleable
 {
@@ -38,7 +39,7 @@ public class Bullet extends GameObject implements Battleable
     public void tick()
     {
 
-        ArrayList<GameObject> others = handler.Collide(this);
+        ConcurrentLinkedQueue<GameObject> others = handler.Collide(this);
         for (GameObject other : others)
         {
             if (!(other instanceof Battleable)) continue;

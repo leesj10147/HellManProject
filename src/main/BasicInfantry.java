@@ -8,6 +8,7 @@ import java.awt.event.KeyEvent;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class BasicInfantry extends GameObject implements Battleable
 {
@@ -64,7 +65,7 @@ public class BasicInfantry extends GameObject implements Battleable
     public void moveToNotIntersection()
     {
 
-        ArrayList<GameObject> object = handler.Collide(this);
+        ConcurrentLinkedQueue<GameObject> object = handler.Collide(this);
         for (GameObject tempObject : object)
         {
             Vector2 v = this.getMidPoint();
@@ -92,9 +93,8 @@ public class BasicInfantry extends GameObject implements Battleable
             }
 
         }
-        for (int i = 0; i < object.size(); ++i)
+        for (GameObject temp : object)
         {
-            GameObject temp = object.get(i);
             Vector2 v = this.getMidPoint();
             v.add(-temp.getMidPoint().x, -temp.getMidPoint().y);
             double len = (velX * velX + velY * velY + 300) / v.magnitude();
@@ -134,7 +134,7 @@ public class BasicInfantry extends GameObject implements Battleable
         }
         if (!notAttack)
         {
-            ArrayList<GameObject> infatries = handler.Collide(getAttackBounds());
+            ConcurrentLinkedQueue<GameObject> infatries = handler.Collide(getAttackBounds());
             //velY = velX = 0;
             for (GameObject object : infatries)
             {

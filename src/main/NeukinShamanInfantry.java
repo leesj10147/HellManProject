@@ -7,6 +7,7 @@ import core.RenderOrder;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class NeukinShamanInfantry extends BasicInfantry
 {
@@ -49,7 +50,7 @@ public class NeukinShamanInfantry extends BasicInfantry
         long nowTime = BattleScene.syncedCurrentTime();
         if (nowTime - lastTime <= 1000) return;
         lastTime = nowTime;
-        ArrayList<GameObject> infantries = handler.findObjectsById(ID.Infantry);
+        ConcurrentLinkedQueue<GameObject> infantries = handler.findObjectsById(ID.Infantry);
         for (GameObject object : infantries)
         {
             if (object == this) continue;

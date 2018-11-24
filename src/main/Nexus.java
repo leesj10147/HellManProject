@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Nexus extends BasicTower implements Battleable
 {
@@ -74,7 +75,7 @@ public class Nexus extends BasicTower implements Battleable
 
     boolean canArrange(Point MidPoint)
     {
-        ArrayList<GameObject> towers = handler.findObjectsById(ID.Tower);
+        ConcurrentLinkedQueue<GameObject> towers = handler.findObjectsById(ID.Tower);
         towers.add(this);
         for (GameObject tower : towers)
         {

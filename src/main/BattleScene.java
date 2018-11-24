@@ -15,6 +15,7 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.TreeSet;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -258,7 +259,7 @@ public class BattleScene extends Scene
 
                 if (getTeam() == Team.Red) System.out.println("  Red");
                 else if (getTeam() == Team.Blue) System.out.println("  Blue");*/
-                TreeSet<GameObject> chkTeam = handler.getMyTeamObject(chk.team);
+                ConcurrentSkipListSet<GameObject> chkTeam = handler.getMyTeamObject(chk.team);
                 for (GameObject object : chkTeam)
                 {
                     String toChk = object.distinguish.substring(chk.team == Team.Red ? 3 : 4);
@@ -328,7 +329,7 @@ public class BattleScene extends Scene
     {
         ++cnt;
         if (cnt % 3 != 1) return;
-        TreeSet<GameObject> tosend = handler.getMyTeamObject(team);
+        ConcurrentSkipListSet<GameObject> tosend = handler.getMyTeamObject(team);
         for (GameObject object : tosend)
         {
             if (object instanceof  BasicInfantry)
@@ -388,7 +389,7 @@ public class BattleScene extends Scene
             updateSend();
             updateReceive();
         }
-        ArrayList<GameObject> towers = handler.findObjectsById(ID.Tower);
+        ConcurrentLinkedQueue<GameObject> towers = handler.findObjectsById(ID.Tower);
         for (int i = 1; i < sectors.length - 1; ++i)
         {
             int redCnt = 0;

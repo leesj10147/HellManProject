@@ -9,6 +9,7 @@ import main.Team;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.TreeSet;
+import java.util.concurrent.ConcurrentSkipListSet;
 
 public class CheckGameObject extends GameObject
 {
@@ -26,7 +27,7 @@ public class CheckGameObject extends GameObject
     {
         super(x, y, WIDTH, HEIGHT, id, handler);
         this.team = team;
-        TreeSet<GameObject> set = handler.getMyTeamObject(team);
+        ConcurrentSkipListSet<GameObject> set = handler.getMyTeamObject(team);
         list = new ArrayList<>(set.size());
         if (this.team == Team.Red)
             set.forEach(a -> list.add(a.distinguish.substring(3)));

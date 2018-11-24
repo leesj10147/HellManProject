@@ -7,6 +7,7 @@ import core.RenderOrder;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class MoneyMakerInfantry extends NormalInfantry
 {
@@ -25,7 +26,7 @@ public class MoneyMakerInfantry extends NormalInfantry
     protected MoneyMakerInfantry(Team team, double x, double y, int WIDTH, int HEIGHT, ID id, Handler handler, int renderOrder)
     {
         super(team, x, y, WIDTH, HEIGHT, id, handler, renderOrder);
-        ArrayList<GameObject> arr = handler.findObjectsById(ID.Nexus);
+        ConcurrentLinkedQueue<GameObject> arr = handler.findObjectsById(ID.Nexus);
         for (GameObject object : arr)
         {
             if (object instanceof Nexus && ((Nexus) object).team == this.team)

@@ -20,7 +20,7 @@ public class Handler
     {
 
     }
-    public void tick()
+    public synchronized void tick()
     {
         objects.forEach(GameObject::tick);
         /*String str;
@@ -38,22 +38,22 @@ public class Handler
         while (!removeList.isEmpty()) objects.remove(removeList.poll());
     }
 
-    public void render(Graphics2D g2d)
+    public synchronized void render(Graphics2D g2d)
     {
         objects.forEach(i -> i.render(g2d));
     }
 
-    public void addObject(GameObject object)
+    public synchronized void addObject(GameObject object)
     {
         this.addList.add(object);
     }
 
-    public void removeObject(GameObject object)
+    public synchronized void removeObject(GameObject object)
     {
         this.removeList.add(object);
     }
 
-    public GameObject findObjectById(ID id)
+    public synchronized GameObject findObjectById(ID id)
     {
         for (GameObject tempObject : objects)
         {
@@ -64,9 +64,9 @@ public class Handler
         }
         return null;
     }
-    public TreeSet<GameObject> getMyTeamObject(Team team)
+    public synchronized ConcurrentSkipListSet<GameObject> getMyTeamObject(Team team)
     {
-        TreeSet<GameObject> ret = new TreeSet<>();
+        ConcurrentSkipListSet<GameObject> ret = new ConcurrentSkipListSet<>();
         for (GameObject obj : objects)
         {
             if (obj instanceof BasicInfantry)
@@ -85,15 +85,15 @@ public class Handler
         }
         return ret;
     }
-    public ArrayList<GameObject> findObjectsById(ID id)
+    public synchronized ConcurrentLinkedQueue<GameObject> findObjectsById(ID id)
     {
-        ArrayList<GameObject> res = new ArrayList<>();
+        ConcurrentLinkedQueue<GameObject> res = new ConcurrentLinkedQueue<>();
         for (GameObject tempObject : objects)
             if (tempObject.getId() == id) res.add(tempObject);
         return res;
     }
 
-    public void removeObjectsById(ID id)
+    public synchronized void removeObjectsById(ID id)
     {
         objects.forEach(i ->
         {
@@ -101,20 +101,20 @@ public class Handler
         });
     }
 
-    public void clear()
+    public synchronized void clear()
     {
         removeList.addAll(objects);
         removeList.addAll(addList);
     }
 
-    public int size()
+    public synchronized int size()
     {
         return objects.size();
     }
 
-    public ArrayList<GameObject> Collide(GameObject object)
+    public synchronized ConcurrentLinkedQueue<GameObject> Collide(GameObject object)
     {
-        ArrayList<GameObject> result = new ArrayList<>();
+        ConcurrentLinkedQueue<GameObject> result = new ConcurrentLinkedQueue<>();
         for (GameObject tempObject : objects)
             if (tempObject.getBounds().intersects(object.getBounds()) && tempObject != object && !tempObject.isIgnoreCollision())
             {
@@ -122,16 +122,16 @@ public class Handler
             }
         return result;
     }
-    public ArrayList<GameObject> Collide(Rectangle bound)
+    public synchronized ConcurrentLinkedQueue<GameObject> Collide(Rectangle bound)
     {
-        ArrayList<GameObject> result = new ArrayList<>();
+        ConcurrentLinkedQueue<GameObject> result = new ConcurrentLinkedQueue<>();
         for (GameObject tempObject : objects)
         {
             if (tempObject.getBounds().intersects(bound) && !tempObject.isIgnoreCollision()) result.add(tempObject);
         }
         return result;
     }
-    public ConcurrentSkipListSet<GameObject> getObjects()
+    public synchronized ConcurrentSkipListSet<GameObject> getObjects()
     {
         return objects;
     }

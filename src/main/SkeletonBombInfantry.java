@@ -8,6 +8,7 @@ import core.RenderOrder;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class SkeletonBombInfantry extends BasicInfantry
 {
@@ -40,7 +41,7 @@ public class SkeletonBombInfantry extends BasicInfantry
         moveToNotIntersection();
         if (this.hp <= 0)
         {
-            ArrayList<GameObject> towers = handler.findObjectsById(ID.Tower);
+            ConcurrentLinkedQueue<GameObject> towers = handler.findObjectsById(ID.Tower);
             towers.addAll(handler.findObjectsById(ID.Nexus));
             boolean attacked = false;
             if (towers.size() != 0)
@@ -60,7 +61,7 @@ public class SkeletonBombInfantry extends BasicInfantry
             }
             if (!attacked)
             {
-                ArrayList<GameObject> infantrys = handler.findObjectsById(ID.Infantry);
+                ConcurrentLinkedQueue<GameObject> infantrys = handler.findObjectsById(ID.Infantry);
                 for (GameObject object : infantrys)
                 {
                     BasicInfantry basicInfantry = (BasicInfantry) object;
