@@ -40,13 +40,13 @@ public class BattleScene extends Scene
         Nexus test6;
         if (team == Team.Red)
         {
-            test6 = new Nexus(team, 100, 100, GameManager.loadImage("cannon.png"), ID.Nexus, handler, 3000);
+            test6 = new Nexus(team, 100, 100, GameManager.loadImage("cannon.png"), ID.Nexus, handler, 3100);
             handler.addObject(new Mine(team, 500, 500, GameManager.loadImage("mine.png"), ID.Barrier, handler, 3000));
             handler.addObject(new Farm(team, 100, 500, GameManager.loadImage("farm.png"), ID.Barrier, handler, 3000));
             handler.addObject(new OdaMine(team, 500, 100, GameManager.loadImage("odamine.png"), ID.Barrier, handler, 3000));
         } else
         {
-            test6 = new Nexus(team, 4000, 2770, GameManager.loadImage("cannon.png"), ID.Nexus, handler, 3000);
+            test6 = new Nexus(team, 4000, 2770, GameManager.loadImage("cannon.png"), ID.Nexus, handler, 3100);
             handler.addObject(new Mine(team, 3600, 2370, GameManager.loadImage("mine.png"), ID.Barrier, handler, 3000));
             handler.addObject(new Farm(team, 4000, 2370, GameManager.loadImage("farm.png"), ID.Barrier, handler, 3000));
             handler.addObject(new OdaMine(team, 3600, 2770, GameManager.loadImage("odamine.png"), ID.Barrier, handler, 3000));

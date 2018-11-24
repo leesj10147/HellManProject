@@ -23,6 +23,7 @@ public class SkeletonBombInfantry extends BasicInfantry
         this.hp = 1;
         this.speed = 20;
         this.notAttack = true;
+        this.attackSound = "sound\\hit-sound1.wav";
     }
 
     public SkeletonBombInfantry(Team team, double x, double y, BufferedImage image, ID id, Handler handler, int renderOrder)
@@ -50,7 +51,9 @@ public class SkeletonBombInfantry extends BasicInfantry
 
                     if (tower.team != this.team && this.getAttackBounds().intersects(tower.getBounds()))
                     {
-                        tower.applyDamage(this, this.damage * 10);
+                        this.damage *= 10;
+                        attack(tower);
+
                         attacked = true;
                     }
                 }
@@ -63,7 +66,7 @@ public class SkeletonBombInfantry extends BasicInfantry
                     BasicInfantry basicInfantry = (BasicInfantry) object;
                     if (this.team != basicInfantry.team && this.getBombBound().intersects(basicInfantry.getBounds()))
                     {
-                        basicInfantry.applyDamage(this, this.damage);
+                        attack(basicInfantry);
                     }
                 }
             }

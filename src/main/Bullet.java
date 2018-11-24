@@ -1,6 +1,7 @@
 package main;
 
 import core.*;
+import network.DamageInfo;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -76,7 +77,16 @@ public class Bullet extends GameObject implements Battleable
     public void attack(double damage, BasicInfantry target)
     {
         if (attacked) return;
-        target.applyDamage(this, damage);
+
+        if (this.team != BattleScene.getTeam()) return;
+        if (GameManager.scene instanceof BattleScene)
+        {
+            ((BattleScene) GameManager.scene).sendObject(new DamageInfo(target.hashCode(), this.damage));
+        }
+
+
+
+
         GameManager.playSound("sound\\hit-sound2.wav", false);
         handler.removeObject(this);
         attacked = true;

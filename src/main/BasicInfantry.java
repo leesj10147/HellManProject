@@ -262,7 +262,11 @@ public class BasicInfantry extends GameObject implements Battleable
         if (this.team != BattleScene.getTeam()) return;
         if (GameManager.scene instanceof BattleScene)
         {
-            ((BattleScene) GameManager.scene).sendObject(new DamageInfo(target.hashCode(), this.damage));
+            Team inTeam = ((BattleScene) GameManager.scene).getTeamOfSector(this.getMidPoint().getPoint());
+            if (inTeam == this.team)
+                ((BattleScene) GameManager.scene).sendObject(new DamageInfo(target.hashCode(), this.damage + 3));
+            else
+                ((BattleScene) GameManager.scene).sendObject(new DamageInfo(target.hashCode(), this.damage));
         }
         GameManager.playSound(attackSound, false);
     }
