@@ -78,7 +78,11 @@ public class Nexus extends BasicTower implements Battleable
         towers.add(this);
         for (GameObject tower : towers)
         {
-            if (tower.getMidPoint().getPoint().distance(MidPoint) < 500) return true;
+            if (tower instanceof  BasicTower)
+            {
+                if (((BasicTower) tower).team != this.team) continue;
+                if (tower.getMidPoint().getPoint().distance(MidPoint) < 500) return true;
+            }
         }
         return false;
     }
