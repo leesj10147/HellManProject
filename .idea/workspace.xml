@@ -6,14 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="inteam sector 버프&#10;skeletonBom버그 수정&#10;불릿버그 수정">
+    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="tower, barrier 설치사거리 버그 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BasicInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BasicInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/Bullet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/SkeletonBombInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/SkeletonBombInfantry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/SkeletonBombInfantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/SkeletonBombInfantry.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,25 +91,25 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MF" value="1" />
-          <entry key="java" value="185" />
+          <entry key="java" value="186" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="185" />
+          <entry key="JAVA" value="186" />
           <entry key="Manifest" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="12522" />
-          <entry key="txt" value="642" />
+          <entry key="java" value="12614" />
+          <entry key="txt" value="678" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12522" />
-          <entry key="PLAIN_TEXT" value="642" />
+          <entry key="JAVA" value="12614" />
+          <entry key="PLAIN_TEXT" value="678" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -127,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="49" column="43" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="43" />
+            <state relative-caret-position="533">
+              <caret line="210" column="5" lean-forward="true" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -136,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/SkeletonBombInfantry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-98">
-              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+            <state relative-caret-position="306">
+              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -151,29 +147,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/core/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="167" column="36" selection-start-line="167" selection-start-column="36" selection-end-line="167" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/core/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+            <state relative-caret-position="650">
+              <caret line="168" column="36" selection-start-line="168" selection-start-column="36" selection-end-line="168" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/MagicianInfantry.java">
+        <entry file="file://$PROJECT_DIR$/src/core/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            <state relative-caret-position="174">
+              <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -190,8 +177,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Bullet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="782">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/BasicTower.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -199,8 +195,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2856">
-              <caret line="173" column="5" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
+            <state relative-caret-position="275">
+              <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
+              <folding>
+                <element signature="e#11843#11844#0" expanded="true" />
+                <element signature="e#11912#11913#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -313,7 +313,6 @@
         <option value="$PROJECT_DIR$/src/main/BasicBarrier.java" />
         <option value="$PROJECT_DIR$/src/main/NeukinShamanInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/GoblinGangInfantry.java" />
-        <option value="$PROJECT_DIR$/src/core/GameManager.java" />
         <option value="$PROJECT_DIR$/src/main/Mine.java" />
         <option value="$PROJECT_DIR$/src/main/MagicianInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/HeavyArmorInfantry.java" />
@@ -321,13 +320,14 @@
         <option value="$PROJECT_DIR$/src/core/Window.java" />
         <option value="$PROJECT_DIR$/src/main/Farm.java" />
         <option value="$PROJECT_DIR$/src/main/OdaMine.java" />
-        <option value="$PROJECT_DIR$/src/main/Nexus.java" />
         <option value="$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/BattleScene.java" />
-        <option value="$PROJECT_DIR$/src/main/SkeletonBombInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/Bullet.java" />
         <option value="$PROJECT_DIR$/src/main/BasicInfantry.java" />
         <option value="$PROJECT_DIR$/src/core/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/Nexus.java" />
+        <option value="$PROJECT_DIR$/src/main/SkeletonBombInfantry.java" />
+        <option value="$PROJECT_DIR$/src/core/GameManager.java" />
       </list>
     </option>
   </component>
@@ -338,8 +338,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="344" />
-    <option name="y" value="51" />
+    <option name="x" value="477" />
+    <option name="y" value="35" />
     <option name="width" value="1461" />
     <option name="height" value="859" />
   </component>
@@ -586,7 +586,7 @@
       <workItem from="1542932585984" duration="4876000" />
       <workItem from="1542973646053" duration="8875000" />
       <workItem from="1543021417406" duration="4189000" />
-      <workItem from="1543060203128" duration="885000" />
+      <workItem from="1543060203128" duration="2823000" />
     </task>
     <task id="LOCAL-00001" summary="lowed NetWork Tick speed">
       <created>1542807468086</created>
@@ -756,14 +756,29 @@
       <option name="project" value="LOCAL" />
       <updated>1543060732460</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="log프린트 지움">
+      <created>1543061129512</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1543061129512</updated>
+    </task>
+    <task id="LOCAL-00026" summary="tower, barrier 설치사거리 버그 수정">
+      <created>1543062284336</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1543062284336</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289955000" />
+    <option name="totallyTimeSpent" value="291893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -774,7 +789,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32904884" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.36590663" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.36373508" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3984799" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -782,7 +797,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.23561347" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.29972374" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49892932" weight="0.25515744" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -832,7 +847,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="lowed NetWork Tick speed" />
     <MESSAGE value="remove log msg" />
     <MESSAGE value="Nexus 상점 좌측 상단 이동 가능&#10;Sector 점령 구현&#10;몇몇 버그 수정" />
     <MESSAGE value="sync network time" />
@@ -856,7 +870,9 @@
     <MESSAGE value="불릿안사라짐 해결" />
     <MESSAGE value="shadow시간 문제해결" />
     <MESSAGE value="inteam sector 버프&#10;skeletonBom버그 수정&#10;불릿버그 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="inteam sector 버프&#10;skeletonBom버그 수정&#10;불릿버그 수정" />
+    <MESSAGE value="log프린트 지움" />
+    <MESSAGE value="tower, barrier 설치사거리 버그 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="tower, barrier 설치사거리 버그 수정" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../HellMan/Let's Build a Game/src/network/CheckGameObject.java" />
@@ -1001,13 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/BasicTower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Mine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1087,13 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2856">
-          <caret line="173" column="5" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/BasicBarrier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1101,38 +1103,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="167" column="36" selection-start-line="167" selection-start-column="36" selection-end-line="167" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="49" column="43" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/SkeletonBombInfantry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-98">
-          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1145,8 +1119,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+        <state relative-caret-position="174">
+          <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
+          <folding>
+            <element signature="e#11843#11844#0" expanded="true" />
+            <element signature="e#11912#11913#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SkeletonBombInfantry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/BasicTower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="210" column="5" lean-forward="true" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="168" column="36" selection-start-line="168" selection-start-column="36" selection-end-line="168" selection-end-column="36" />
         </state>
       </provider>
     </entry>

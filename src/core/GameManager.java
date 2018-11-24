@@ -164,10 +164,9 @@ public class GameManager
             AudioInputStream au= AudioSystem.getAudioInputStream(new File(file).getAbsoluteFile());
 
             Clip clip = AudioSystem.getClip();
-
-            if (Loop) clip.loop(-1);
             clip.open(au);
             clip.start();
+            if (Loop) clip.loop(-1);
         }
         catch(Exception e)
         {

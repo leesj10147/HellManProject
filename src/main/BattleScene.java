@@ -340,8 +340,11 @@ public class BattleScene extends Scene
             }
             if (object instanceof Bullet)
             {
-                if (((Bullet) object).attacked) handler.removeObject(object);
-                continue;
+                if (((Bullet) object).attacked)
+                {
+                    handler.removeObject(object);
+                    continue;
+                }
             }
             send.sendObject(object);
 

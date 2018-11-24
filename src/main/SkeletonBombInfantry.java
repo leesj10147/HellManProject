@@ -23,7 +23,7 @@ public class SkeletonBombInfantry extends BasicInfantry
         this.hp = 1;
         this.speed = 20;
         this.notAttack = true;
-        this.attackSound = "sound\\hit-sound1.wav";
+        this.attackSound = "sound\\hit-sound2.wav";
     }
 
     public SkeletonBombInfantry(Team team, double x, double y, BufferedImage image, ID id, Handler handler, int renderOrder)
