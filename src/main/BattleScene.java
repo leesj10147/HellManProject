@@ -253,16 +253,13 @@ public class BattleScene extends Scene
             if (obj instanceof CheckGameObject)
             {
                 CheckGameObject chk = (CheckGameObject) obj;
-                ConcurrentSkipListSet<GameObject> chkTeam = handler.getMyTeamObject(chk.team);
-                for (GameObject object : chkTeam)
+                GameObject del = null;
+                for (GameObject object : handler.getObjects())
                 {
-                    String toChk = object.distinguish.substring(chk.team == Team.Red ? 3 : 4);
-
-                    if (chk.list.contains(toChk)) continue;
-                    System.out.println(toChk + " " + object + " "+object.distinguish);
-                    handler.getObjects().remove(object);
+                    if (object.hashCode() == chk.targetcode) del = object;
                 }
-                continue;
+                if (del == null) continue;
+                handler.getObjects().remove(del);
             }
             if (handler.getObjects().contains(obj))
             {
@@ -346,7 +343,6 @@ public class BattleScene extends Scene
             send.sendObject(object);
 
         }
-        send.sendObject(new CheckGameObject(handler, team));
     }
 
     public static boolean isOurTeam(GameObject object, Team whosTeam)

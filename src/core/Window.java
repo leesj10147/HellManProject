@@ -24,7 +24,7 @@ public class Window
         game.requestFocus();
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice gd = ge.getDefaultScreenDevice();
-        gd.setFullScreenWindow(frame);
+        //gd.setFullScreenWindow(frame);
 
     }
 }

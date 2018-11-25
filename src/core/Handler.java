@@ -1,6 +1,7 @@
 package core;
 
 import main.*;
+import network.CheckGameObject;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -34,8 +35,21 @@ public class Handler
             {
                 obj.tick();
             }*/
+        for (GameObject object : objects)
+        {
+            if (objects.contains(object) == false)
+                System.out.println("what?");
+        }
         while (!addList.isEmpty()) objects.add(addList.poll());
-        while (!removeList.isEmpty()) objects.remove(removeList.poll());
+        while (!removeList.isEmpty())
+        {
+            if (GameManager.scene instanceof BattleScene)
+            {
+                ((BattleScene) GameManager.scene).sendObject(new CheckGameObject(this, removeList.peek().hashCode()));
+            }
+            objects.remove(removeList.poll());
+
+        }
     }
 
     public synchronized void render(Graphics2D g2d)
