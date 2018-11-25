@@ -7,8 +7,8 @@ import java.awt.image.BufferStrategy;
 
 public final class Game extends Canvas implements Runnable
 {
-    public static final int WIDTH = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDisplayMode().getWidth();
-    public static final int HEIGHT = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDisplayMode().getHeight();
+    public static final int WIDTH = Toolkit.getDefaultToolkit().getScreenSize().width;
+    public static final int HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height;
     public static final int tickPerSecond = 30;
     private Thread thread;
     private boolean running = false;

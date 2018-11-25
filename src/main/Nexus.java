@@ -5,7 +5,6 @@ import core.*;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Nexus extends BasicTower implements Battleable
@@ -79,7 +78,7 @@ public class Nexus extends BasicTower implements Battleable
         towers.add(this);
         for (GameObject tower : towers)
         {
-            if (tower instanceof  BasicTower)
+            if (tower instanceof BasicTower)
             {
                 if (((BasicTower) tower).team != this.team) continue;
                 if (tower.getMidPoint().getPoint().distance(MidPoint) < 500) return true;
@@ -157,10 +156,10 @@ public class Nexus extends BasicTower implements Battleable
                 this.mouseClickedOnMapLocation = new Point(Integer.MAX_VALUE, Integer.MAX_VALUE);
             } else if (rect[8].contains(mouseClickedOnMapLocation))
             {
-                handler.addObject(new MagicianInfantry(team, this.x+this.getWIDTH(), this.y+this.getHEIGHT(), GameManager.loadImage(itemList[8]), ID.Infantry, handler, RenderOrder.Main.order));
+                handler.addObject(new MagicianInfantry(team, this.x + this.getWIDTH(), this.y + this.getHEIGHT(), GameManager.loadImage(itemList[8]), ID.Infantry, handler, RenderOrder.Main.order));
             } else if (rect[9].contains(mouseClickedOnMapLocation))
             {
-                handler.addObject(new HeavyArmorInfantry(team, this.x+this.getWIDTH(), this.y+this.getHEIGHT(), GameManager.loadImage(itemList[8]), ID.Infantry, handler, RenderOrder.Main.order));
+                handler.addObject(new HeavyArmorInfantry(team, this.x + this.getWIDTH(), this.y + this.getHEIGHT(), GameManager.loadImage(itemList[8]), ID.Infantry, handler, RenderOrder.Main.order));
             }
             Point p = BattleScene.getOnMapLocation(MouseInput.getLocation());
             boolean contain = false;
@@ -187,6 +186,7 @@ public class Nexus extends BasicTower implements Battleable
         for (String line : text.split("\n"))
             g.drawString(line, x, y += g.getFontMetrics().getHeight());
     }
+
     @Override
     public void render(Graphics2D g2d)
     {
@@ -232,11 +232,11 @@ public class Nexus extends BasicTower implements Battleable
         }
         g2d.setFont(moneyFont);
         g2d.setColor(Color.orange);
-        g2d.drawString("Gold : " + gold, BattleScene.getCameraX() + 500, BattleScene.getCameraY() + 150);
+        g2d.drawString("Gold : " + gold, BattleScene.getCameraX() + Game.WIDTH / 2 - 300, BattleScene.getCameraY() + 150);
         g2d.setColor(Color.orange);
-        g2d.drawString("Crop : " + crop, BattleScene.getCameraX() + 800, BattleScene.getCameraY() + 150);
+        g2d.drawString("Crop : " + crop, BattleScene.getCameraX() + Game.WIDTH / 2, BattleScene.getCameraY() + 150);
         g2d.setColor(Color.BLUE);
-        g2d.drawString("Odamant : " + odamant, BattleScene.getCameraX() + 1100, BattleScene.getCameraY() + 150);
+        g2d.drawString("Odamant : " + odamant, BattleScene.getCameraX() + Game.WIDTH / 2 + 300, BattleScene.getCameraY() + 150);
     }
 
     @Override
