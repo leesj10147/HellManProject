@@ -6,12 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="글씨 위치 설정">
+    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="유닛의 가격 결정&#10;readme업데이트">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.docx" beforeDir="false" afterPath="$PROJECT_DIR$/readme.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Nexus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Nexus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colBarrier.png" beforeDir="false" afterPath="$PROJECT_DIR$/colBarrier.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rowBarrier.png" beforeDir="false" afterPath="$PROJECT_DIR$/rowBarrier.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,14 +102,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="14650" />
-          <entry key="txt" value="870" />
+          <entry key="java" value="14651" />
+          <entry key="txt" value="892" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14650" />
-          <entry key="PLAIN_TEXT" value="870" />
+          <entry key="JAVA" value="14651" />
+          <entry key="PLAIN_TEXT" value="892" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -167,7 +165,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/MoneyMakerInfantry.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -188,11 +186,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="225" column="70" selection-start-line="225" selection-start-column="70" selection-end-line="225" selection-end-column="70" />
+            <state relative-caret-position="306">
+              <caret line="262" column="36" selection-start-line="262" selection-start-column="36" selection-end-line="262" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -327,8 +325,8 @@
         <option value="$PROJECT_DIR$/src/main/MagicianInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/BasicTower.java" />
         <option value="$PROJECT_DIR$/src/core/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/Nexus.java" />
         <option value="$PROJECT_DIR$/src/main/BasicInfantry.java" />
+        <option value="$PROJECT_DIR$/src/main/Nexus.java" />
       </list>
     </option>
   </component>
@@ -339,7 +337,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="201" />
+    <option name="x" value="556" />
     <option name="y" value="60" />
     <option name="width" value="1436" />
     <option name="height" value="977" />
@@ -407,7 +405,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543141598720" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543145596788" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/sound" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -579,7 +577,7 @@
       <workItem from="1543060203128" duration="17264000" />
       <workItem from="1543081594761" duration="115000" />
       <workItem from="1543122933321" duration="16000" />
-      <workItem from="1543123230806" duration="13068000" />
+      <workItem from="1543123230806" duration="16787000" />
     </task>
     <task id="LOCAL-00001" summary="lowed NetWork Tick speed">
       <created>1542807468086</created>
@@ -826,14 +824,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543136124881</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="유닛의 가격 결정&#10;readme업데이트">
+      <created>1543141644120</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1543141644120</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319533000" />
+    <option name="totallyTimeSpent" value="323252000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="201" y="60" width="1436" height="977" extended-state="0" />
+    <frame x="429" y="94" width="1436" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19476745" />
@@ -845,7 +850,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.3152174" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.31472683" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3984799" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -903,7 +908,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="방패병 추가-강한채력병&#10;힐러 밸런스패치-채력조정" />
     <MESSAGE value="Nexus아이탬 추가 - 마법사(원딜)" />
     <MESSAGE value="마법사원딜 밸런스패치" />
     <MESSAGE value="마법사원딜 밸런스패치&#10;총알 안사라짐버그 수정" />
@@ -928,7 +932,8 @@
     <MESSAGE value="object정렬문제 해결 - 이것은 안사라짐의 진정한 원인?" />
     <MESSAGE value="부드럽게 방어막 통과&#10;밸런스 패치" />
     <MESSAGE value="글씨 위치 설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="글씨 위치 설정" />
+    <MESSAGE value="유닛의 가격 결정&#10;readme업데이트" />
+    <option name="LAST_COMMIT_MESSAGE" value="유닛의 가격 결정&#10;readme업데이트" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../HellMan/Let's Build a Game/src/core/ID.java" />
@@ -1213,16 +1218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MoneyMakerInfantry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/NeukinShamanInfantry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="633">
@@ -1232,8 +1227,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="225" column="70" selection-start-line="225" selection-start-column="70" selection-end-line="225" selection-end-column="70" />
+        <state relative-caret-position="306">
+          <caret line="262" column="36" selection-start-line="262" selection-start-column="36" selection-end-line="262" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MoneyMakerInfantry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
