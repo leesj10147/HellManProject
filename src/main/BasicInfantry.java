@@ -7,7 +7,6 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class BasicInfantry extends GameObject implements Battleable
@@ -85,10 +84,27 @@ public class BasicInfantry extends GameObject implements Battleable
         {
             if (temp instanceof BasicBarrier)
             {
-                if (this.x > temp.getX()) this.x += Math.abs(velX);
-                else this.x -= Math.abs(velX);
-                if (this.y > temp.getY()) this.y += Math.abs(velY);
-                else this.y -= Math.abs(velY);
+
+                x -= velX;
+                y -= velY;
+
+                x += velX;
+                if (this.getBounds().intersects(temp.getBounds())) x -= velX;
+
+                y += velY;
+                if (this.getBounds().intersects(temp.getBounds())) y -= velY;
+
+                if (this.getBounds().intersects(temp.getBounds()))
+                {
+                    Vector2 v = this.getMidPoint();
+                    v.add(-temp.getMidPoint().x, -temp.getMidPoint().y);
+                    double len = (velX * velX + velY * velY + 300) / v.magnitude();
+                    v = v.normalize();
+                    v.multiply(len);
+                    x += v.x;
+                    y += v.y;
+                }
+
                 return;
             }
 

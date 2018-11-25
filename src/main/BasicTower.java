@@ -18,8 +18,8 @@ public class BasicTower extends BasicInfantry
     public BasicTower(Team team, double x, double y, int WIDTH, int HEIGHT, ID id, Handler handler, int renderOrder)
     {
         super(team, 1000, x, y, WIDTH, HEIGHT, id, handler, renderOrder);
-        this.attackRange = 350;
-        this.damage = 7;
+        this.attackRange = 600;
+        this.damage = 10;
         this.delayBetweenAttack = 500;
         this.notMove = true;
         this.recentTickMoved = true;
@@ -39,7 +39,7 @@ public class BasicTower extends BasicInfantry
         if (target instanceof GameObject)
         {
 
-            handler.addObject(new Bullet(team, damage, ((GameObject) target).getMidPoint(), 10, this.getMidPoint().x, this.getMidPoint().y, 30, 30, ID.Bullet, handler, RenderOrder.Main.order));
+            handler.addObject(new Bullet(team, damage, ((GameObject) target).getMidPoint(), 15, this.getMidPoint().x, this.getMidPoint().y, 30, 30, ID.Bullet, handler, RenderOrder.Main.order));
             GameObject o = (GameObject) target;
             this.velX = o.getMidPoint().x - this.getMidPoint().x;
             this.velY = o.getMidPoint().y - this.getMidPoint().y;

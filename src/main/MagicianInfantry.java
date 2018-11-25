@@ -18,7 +18,7 @@ public class MagicianInfantry extends BasicInfantry
     {
         super(team, 10, x, y, WIDTH, HEIGHT, id, handler, renderOrder);
         this.damage = 15;
-        this.attackRange = 300;
+        this.attackRange = 600;
         this.hp = 10;
         this.delayBetweenAttack = 1000;
         this.speed = 6;
@@ -45,7 +45,7 @@ public class MagicianInfantry extends BasicInfantry
         if (target instanceof GameObject)
         {
 
-            handler.addObject(new Bullet(team, damage, ((GameObject)target).getMidPoint(), 10, this.getMidPoint().x, this.getMidPoint().y, 30, 30, ID.Bullet, handler, RenderOrder.Main.order));
+            handler.addObject(new Bullet(team, damage, ((GameObject)target).getMidPoint(), 17, this.getMidPoint().x, this.getMidPoint().y, 30, 30, ID.Bullet, handler, RenderOrder.Main.order));
         }
     }
 }
