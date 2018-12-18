@@ -13,5 +13,6 @@ public enum ID implements Serializable
     Bullet,
     Nexus,
     NetworkChecker,
-    DamageInfo
+    DamageInfo,
+    Smoke
 }

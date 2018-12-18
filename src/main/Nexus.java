@@ -27,7 +27,7 @@ public class Nexus extends BasicTower implements Battleable
         itemList[2] = "BasicInfantry.png";
         itemList[3] = "BasicInfantry.png";
         itemList[4] = "BasicInfantry.png";
-        itemList[5] = "BasicInfantry.png";
+        itemList[5] = "powwow.png";
         itemList[6] = "rowBarrier.png";
         itemList[7] = "colBarrier.png";
         itemList[8] = "BasicInfantry.png";
