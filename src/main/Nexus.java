@@ -113,7 +113,12 @@ public class Nexus extends BasicTower implements Battleable
             p.x -= itemImage.getWidth() / 2;
             p.y -= itemImage.getHeight() / 2;
             Rectangle chk = new Rectangle(p.x, p.y, itemImage.getWidth(), itemImage.getHeight());
-            if (!this.mouseClickedOnMapLocation.equals(new Point(Integer.MAX_VALUE, Integer.MAX_VALUE)) &&
+            if (!this.mouseClickedOnMapLocation.equals(new Point(Integer.MAX_VALUE, Integer.MIN_VALUE))
+                        && canArrange(new Point((int) (chk.x + chk.getWidth() / 2), (int) (chk.y + chk.getHeight() / 2))) && itemNumberOfSelectedUnit == 10)
+            {
+                handler.addObject(new SmokeShell(this.team, p.x, p.y, itemImage, ID.Smoke, handler, 6000));
+            }
+            else if (!this.mouseClickedOnMapLocation.equals(new Point(Integer.MAX_VALUE, Integer.MAX_VALUE)) &&
                         canArrange(new Point((int) (chk.x + chk.getWidth() / 2), (int) (chk.y + chk.getHeight() / 2))) && handler.Collide(chk).size() == 0)
             {
                 if (itemNumberOfSelectedUnit == 1)
@@ -284,11 +289,20 @@ public class Nexus extends BasicTower implements Battleable
             Point p = BattleScene.getOnMapLocation(MouseInput.getLocation());
             p.x -= itemImage.getWidth() / 2;
             p.y -= itemImage.getHeight() / 2;
-            if (handler.Collide(new Rectangle(p.x, p.y, itemImage.getWidth(), itemImage.getHeight())).size() > 0
+            if (itemNumberOfSelectedUnit == 10)
+            {
+                if (canArrange(new Point((p.x + itemImage.getWidth() / 2), (p.y + itemImage.getHeight() / 2))))
+                    itemImage = GameManager.setEdge(itemImage, Color.green);
+                else
+                    itemImage = GameManager.setEdge(itemImage, Color.red);
+
+            }
+            else if (handler.Collide(new Rectangle(p.x, p.y, itemImage.getWidth(), itemImage.getHeight())).size() > 0
                         || !canArrange(new Point((p.x + itemImage.getWidth() / 2), (p.y + itemImage.getHeight() / 2))))
                 itemImage = GameManager.setEdge(itemImage, Color.red);
             else
                 itemImage = GameManager.setEdge(itemImage, Color.green);
+
             g2d.drawImage(itemImage, p.x, p.y, null);
         }
         if (itemOnMouse != -1)
