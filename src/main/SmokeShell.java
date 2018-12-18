@@ -29,8 +29,8 @@ public class SmokeShell extends BasicBarrier
     @Override
     public void render(Graphics2D g2d)
     {
-        float alpha = 1f;
-        if (this.team != BattleScene.getTeam()) alpha = 0.1f;
+        float alpha = 0.1f;
+        if (this.team != BattleScene.getTeam()) alpha = 1f;
         g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
         super.render(g2d);
         g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1));

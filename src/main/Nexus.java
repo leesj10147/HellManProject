@@ -113,10 +113,11 @@ public class Nexus extends BasicTower implements Battleable
             p.x -= itemImage.getWidth() / 2;
             p.y -= itemImage.getHeight() / 2;
             Rectangle chk = new Rectangle(p.x, p.y, itemImage.getWidth(), itemImage.getHeight());
-            if (!this.mouseClickedOnMapLocation.equals(new Point(Integer.MAX_VALUE, Integer.MIN_VALUE))
+            if (!this.mouseClickedOnMapLocation.equals(new Point(Integer.MAX_VALUE, Integer.MAX_VALUE))
                         && canArrange(new Point((int) (chk.x + chk.getWidth() / 2), (int) (chk.y + chk.getHeight() / 2))) && itemNumberOfSelectedUnit == 10)
             {
                 handler.addObject(new SmokeShell(this.team, p.x, p.y, itemImage, ID.Smoke, handler, 6000));
+                selectedArrangementUnit = false;
             }
             else if (!this.mouseClickedOnMapLocation.equals(new Point(Integer.MAX_VALUE, Integer.MAX_VALUE)) &&
                         canArrange(new Point((int) (chk.x + chk.getWidth() / 2), (int) (chk.y + chk.getHeight() / 2))) && handler.Collide(chk).size() == 0)
@@ -159,7 +160,7 @@ public class Nexus extends BasicTower implements Battleable
                     imageArrangementUnit = itemList[10];
                     selectedArrangementUnit = true;
                     itemNumberOfSelectedUnit = 10;
-                    this.mouseClickedOnMapLocation = new Point(Integer.MAX_VALUE, Integer.MIN_VALUE);
+                    this.mouseClickedOnMapLocation = new Point(Integer.MAX_VALUE, Integer.MAX_VALUE);
                     gold -= 30;
                 }
             } else if (rect[2].contains(mouseClickedOnMapLocation))
