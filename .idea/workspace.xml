@@ -6,16 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="연막탄 추가&#10;암살병 은신효과- 상대팀입장에서 더이상 투명하지도 않음">
-      <change afterPath="$PROJECT_DIR$/BasicInfantry3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dialogBackground.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/powwow.png" afterDir="false" />
+    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BasicInfantry.png" beforeDir="false" afterPath="$PROJECT_DIR$/BasicInfantry.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExeJar/HellManProject.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ExeJar/HellManProject.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/ID.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/ID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ID.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/BattleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BattleScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Nexus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Nexus.java" afterDir="false" />
     </list>
@@ -115,14 +107,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="15954" />
-          <entry key="txt" value="971" />
+          <entry key="java" value="16002" />
+          <entry key="txt" value="982" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15954" />
-          <entry key="PLAIN_TEXT" value="971" />
+          <entry key="JAVA" value="16002" />
+          <entry key="PLAIN_TEXT" value="982" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -142,11 +134,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="334" column="21" selection-start-line="334" selection-start-column="21" selection-end-line="334" selection-end-column="21" />
+            <state relative-caret-position="408">
+              <caret line="309" column="42" lean-forward="true" selection-start-line="309" selection-start-column="42" selection-end-line="309" selection-end-column="42" />
+              <folding>
+                <element signature="e#18560#18561#0" expanded="true" />
+                <element signature="e#18622#18623#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,11 +175,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="425">
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -330,8 +326,8 @@
         <option value="$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/SmokeShell.java" />
         <option value="$PROJECT_DIR$/src/core/ID.java" />
-        <option value="$PROJECT_DIR$/src/main/Nexus.java" />
         <option value="$PROJECT_DIR$/src/main/BattleScene.java" />
+        <option value="$PROJECT_DIR$/src/main/Nexus.java" />
       </list>
     </option>
   </component>
@@ -342,8 +338,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="560" />
-    <option name="y" value="124" />
+    <option name="x" value="128" />
+    <option name="y" value="23" />
     <option name="width" value="1406" />
     <option name="height" value="977" />
   </component>
@@ -405,7 +401,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545176472007" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545176740721" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/sound" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -585,7 +581,7 @@
       <workItem from="1543315119515" duration="15000" />
       <workItem from="1545092074283" duration="5331000" />
       <workItem from="1545120803565" duration="471000" />
-      <workItem from="1545176054988" duration="406000" />
+      <workItem from="1545176054988" duration="677000" />
     </task>
     <task id="LOCAL-00001" summary="lowed NetWork Tick speed">
       <created>1542807468086</created>
@@ -867,17 +863,31 @@
       <option name="project" value="LOCAL" />
       <updated>1545109838389</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="add image">
+      <created>1545176485776</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1545176485776</updated>
+    </task>
+    <task id="LOCAL-00042" summary=".">
+      <created>1545176552581</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1545176552581</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330763000" />
+    <option name="totallyTimeSpent" value="331034000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="547" y="59" width="1406" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15831557" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22065379" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -944,8 +954,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="기본광산 추가" />
-    <MESSAGE value="농장, 오다만트 광산&#10;Nexus에 방어병 추가&#10;공격력 밸런스패치" />
     <MESSAGE value="전체화면 구현" />
     <MESSAGE value="넥서스, 농장, 광산 배치" />
     <MESSAGE value="ShadowPentration 밸런스 패치" />
@@ -969,7 +977,9 @@
     <MESSAGE value="방어막 디자인" />
     <MESSAGE value="연막탄 추가&#10;암살병 은신효과- 상대팀입장에서 더이상 투명하지도 않음" />
     <MESSAGE value="연막!&#10;게임화면" />
-    <option name="LAST_COMMIT_MESSAGE" value="연막!&#10;게임화면" />
+    <MESSAGE value="add image" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../HellMan/Let's Build a Game/src/network/Send.java" />
@@ -1273,17 +1283,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
+    <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <caret line="309" column="42" lean-forward="true" selection-start-line="309" selection-start-column="42" selection-end-line="309" selection-end-column="42" />
+          <folding>
+            <element signature="e#18560#18561#0" expanded="true" />
+            <element signature="e#18622#18623#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="334" column="21" selection-start-line="334" selection-start-column="21" selection-end-line="334" selection-end-column="21" />
+        <state relative-caret-position="425">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
         </state>
       </provider>
     </entry>

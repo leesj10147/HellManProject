@@ -32,7 +32,7 @@ public class Nexus extends BasicTower implements Battleable
         itemList[7] = "colBarrier.png";
         itemList[8] = "BasicInfantry.png";
         itemList[9] = "BasicInfantry.png";
-        itemList[10] = "rowBarrier.png";
+        itemList[10] = "smoke.png";
         itemDescription[0] = "이 친구는 주변의 광산, 농장, 제련소에서 노동을 하며 돈을 벌 수 있습니다.\n 기본적인 공격력과 방어력도 가지고 있지요.\n 가격 : 10gold";
         itemDescription[1] = "적절한 사거리와 적절한 데미지를 가지고, 적절한 크기와 함께 적절한 아름다움을 가진 적절한 대포입니다.\n 적절한 가격으로 적절하게 지을 수 있습니다.\n 가격 : 20gold + 10crop + 5odamant";
         itemDescription[2] = "한 대만 맞으면 부셔져 버릴 것 같은 모습과는 다르게, 끝에 도달하기만 한다면... 콰광!\n 가격 : 10gold + 5crop";

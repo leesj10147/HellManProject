@@ -294,7 +294,12 @@ public class BattleScene extends Scene
                 {
                     if (obj instanceof BasicBarrier)
                     {
-                        if (obj instanceof Mine)
+                        if (obj instanceof SmokeShell)
+                        {
+                            infantry.originalImage = GameManager.loadImage("smoke.png");
+                            infantry.image = GameManager.loadImage("smoke.png");
+                        }
+                        else if (obj instanceof Mine)
                         {
                             infantry.originalImage = GameManager.loadImage("mine.png");
                             infantry.image = GameManager.loadImage("mine.png");
