@@ -322,8 +322,17 @@ public class BattleScene extends Scene
                     }
                 } else
                 {
-                    infantry.originalImage = GameManager.loadImage("BasicInfantry.png");
-                    infantry.image = GameManager.loadImage("BasicInfantry.png");
+                    if (obj instanceof NeukinShamanInfantry)
+                    {
+                        infantry.originalImage= GameManager.loadImage("powwow.png");
+                        infantry.image= GameManager.loadImage("powwow.png");
+                    }
+
+                    else
+                    {
+                        infantry.originalImage = GameManager.loadImage("BasicInfantry.png");
+                        infantry.image = GameManager.loadImage("BasicInfantry.png");
+                    }
                 }
             }
             obj.handler = handler;
