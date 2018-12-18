@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -82,33 +83,49 @@ public class BattleScene extends Scene
         class MyDialogPopup extends JDialog
         {
             AtomicBoolean end = new AtomicBoolean(false);
-
+            BufferedImage backgroundImage = GameManager.loadImage("dialogBackground.jpg");
             MyDialogPopup()
             {
-                setBounds(100, 100, 500, 175);
+                JPanel mp = new JPanel(new FlowLayout())
+                {
+                    @Override
+                    protected void paintComponent(Graphics g)
+                    {
+                        super.paintComponent(g);
+                        g.drawImage(backgroundImage, 0,0,this);
+                    }
+                    @Override
+                    public Dimension getPreferredSize()
+                    {
+                        Dimension size = super.getPreferredSize();
+                        size.width = Math.max(backgroundImage.getWidth(), size.width);
+                        size.height = Math.max(backgroundImage.getHeight(), size.height);
+                        return size;
+                    }
+                };
+                this.add(mp);
+                this.pack();
                 setTitle("Type Your Info");
                 setLocationRelativeTo(null);
-                Container con = getContentPane();
-                con.setLayout(new GridLayout(5, 2, 10, 10));
 
-                JLabel label1 = new JLabel("Team(Red: Server, Blue: Client)", JLabel.TRAILING);
-                con.add(label1);
+                JLabel label1 = new JLabel("Team(Red: Server, Blue: Client) : ", JLabel.TRAILING);
+                mp.add(label1);
                 JTextField textField1 = new JTextField(30);
                 label1.setLabelFor(textField1);
-                con.add(textField1);
+                mp.add(textField1);
 
 
-                JLabel label4 = new JLabel("otherAddress", JLabel.TRAILING);
-                con.add(label4);
+                JLabel label4 = new JLabel("otherAddress : ", JLabel.TRAILING);
+                mp.add(label4);
                 JTextField textField4 = new JTextField(30);
                 label1.setLabelFor(textField4);
-                con.add(textField4);
+                mp.add(textField4);
 
-                JLabel label5 = new JLabel("OK : ", JLabel.TRAILING);
-                con.add(label5);
+                JLabel label5 = new JLabel("                                         OK : ", JLabel.TRAILING);
+                mp.add(label5);
                 JButton button = new JButton("OK");
                 label1.setLabelFor(button);
-                con.add(button);
+                mp.add(button);
                 setVisible(true);
                 button.addActionListener((ActionEvent e) ->
                 {

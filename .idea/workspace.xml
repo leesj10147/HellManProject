@@ -6,12 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="rebuild jar">
-      <change afterPath="$PROJECT_DIR$/src/main/SmokeShell.java" afterDir="false" />
+    <list default="true" id="50368dc5-0d7f-406c-900c-a9efe54f305b" name="Default" comment="연막탄 추가&#10;암살병 은신효과- 상대팀입장에서 더이상 투명하지도 않음">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Nexus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Nexus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/core/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/core/Handler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene$1MyDialogPopup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene$1MyDialogPopup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/BattleScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/Nexus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HellManProject/main/ShadowPenetrationInfantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HellManProject/main/ShadowPenetrationInfantry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/BattleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BattleScene.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,14 +107,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="15071" />
-          <entry key="txt" value="916" />
+          <entry key="java" value="15611" />
+          <entry key="txt" value="958" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15071" />
-          <entry key="PLAIN_TEXT" value="916" />
+          <entry key="JAVA" value="15611" />
+          <entry key="PLAIN_TEXT" value="958" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -126,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="194">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
@@ -141,11 +143,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3519">
-              <caret line="253" column="13" lean-forward="true" selection-start-line="253" selection-start-column="13" selection-end-line="253" selection-end-column="13" />
+            <state relative-caret-position="466">
+              <caret line="123" column="51" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -168,11 +170,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="157" column="31" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="31" />
+            <state relative-caret-position="646">
+              <caret line="43" column="71" lean-forward="true" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
               <folding>
                 <element signature="e#14037#14038#0" expanded="true" />
                 <element signature="e#14106#14107#0" expanded="true" />
@@ -202,8 +204,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/SmokeShell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
+            <state relative-caret-position="425">
+              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -234,7 +236,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>image</find>
       <find>GameObject</find>
       <find>TreeSet</find>
       <find>Serializable</find>
@@ -264,6 +265,7 @@
       <find>-</find>
       <find>snedObject</find>
       <find>System.out.println</find>
+      <find>10</find>
     </findStrings>
     <replaceStrings>
       <replace>hud</replace>
@@ -324,7 +326,6 @@
         <option value="$PROJECT_DIR$/src/main/NeukinShamanInfantry.java" />
         <option value="$PROJECT_DIR$/src/core/GameObject.java" />
         <option value="$PROJECT_DIR$/src/network/CheckGameObject.java" />
-        <option value="$PROJECT_DIR$/src/main/BattleScene.java" />
         <option value="$PROJECT_DIR$/src/core/Window.java" />
         <option value="$PROJECT_DIR$/src/main/MagicianInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/BasicTower.java" />
@@ -334,6 +335,7 @@
         <option value="$PROJECT_DIR$/src/main/ShadowPenetrationInfantry.java" />
         <option value="$PROJECT_DIR$/src/main/SmokeShell.java" />
         <option value="$PROJECT_DIR$/src/main/Nexus.java" />
+        <option value="$PROJECT_DIR$/src/main/BattleScene.java" />
       </list>
     </option>
   </component>
@@ -344,9 +346,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="256" />
-    <option name="y" value="19" />
-    <option name="width" value="1436" />
+    <option name="x" value="560" />
+    <option name="y" value="124" />
+    <option name="width" value="1406" />
     <option name="height" value="977" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -407,7 +409,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545093227216" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545095228050" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/sound" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -585,7 +587,7 @@
       <workItem from="1543152291066" duration="606000" />
       <workItem from="1543307595879" duration="376000" />
       <workItem from="1543315119515" duration="15000" />
-      <workItem from="1545092074283" duration="1143000" />
+      <workItem from="1545092074283" duration="3110000" />
     </task>
     <task id="LOCAL-00001" summary="lowed NetWork Tick speed">
       <created>1542807468086</created>
@@ -846,17 +848,24 @@
       <option name="project" value="LOCAL" />
       <updated>1543145624165</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="연막탄 추가&#10;암살병 은신효과- 상대팀입장에서 더이상 투명하지도 않음">
+      <created>1545093322651</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1545093322652</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325698000" />
+    <option name="totallyTimeSpent" value="327665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15511727" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15511727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -865,7 +874,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.31472683" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49733475" visible="true" weight="0.31378937" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3984799" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -873,7 +882,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021322" side_tool="true" visible="true" weight="0.14332248" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026652" side_tool="true" weight="0.31378937" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49892932" weight="0.25515744" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -923,7 +932,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="마법사원딜 밸런스패치" />
     <MESSAGE value="마법사원딜 밸런스패치&#10;총알 안사라짐버그 수정" />
     <MESSAGE value="기본광산 추가" />
     <MESSAGE value="농장, 오다만트 광산&#10;Nexus에 방어병 추가&#10;공격력 밸런스패치" />
@@ -948,7 +956,8 @@
     <MESSAGE value="글씨 위치 설정" />
     <MESSAGE value="유닛의 가격 결정&#10;readme업데이트" />
     <MESSAGE value="방어막 디자인" />
-    <option name="LAST_COMMIT_MESSAGE" value="방어막 디자인" />
+    <MESSAGE value="연막탄 추가&#10;암살병 은신효과- 상대팀입장에서 더이상 투명하지도 않음" />
+    <option name="LAST_COMMIT_MESSAGE" value="연막탄 추가&#10;암살병 은신효과- 상대팀입장에서 더이상 투명하지도 않음" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../HellMan/Let's Build a Game/src/main/BattleScene.java" />
@@ -1189,13 +1198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/SkeletonBombInfantry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1238,31 +1240,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="43" column="71" lean-forward="true" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
+          <folding>
+            <element signature="e#14037#14038#0" expanded="true" />
+            <element signature="e#14106#14107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/SmokeShell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
+        <state relative-caret-position="425">
+          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
+    <entry file="file://$PROJECT_DIR$/src/core/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3519">
-          <caret line="253" column="13" lean-forward="true" selection-start-line="253" selection-start-column="13" selection-end-line="253" selection-end-column="13" />
+        <state relative-caret-position="194">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Nexus.java">
+    <entry file="file://$PROJECT_DIR$/src/main/BattleScene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="157" column="31" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="31" />
-          <folding>
-            <element signature="e#14037#14038#0" expanded="true" />
-            <element signature="e#14106#14107#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="466">
+          <caret line="123" column="51" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
         </state>
       </provider>
     </entry>
