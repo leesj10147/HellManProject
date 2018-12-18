@@ -79,7 +79,7 @@ public class ShadowPenetrationInfantry extends BasicInfantry
         if (isShadow)
         {
             float alpha = 0.1f;
-            //if (this.team != BattleScene.getTeam()) alpha = 0;
+            if (this.team != BattleScene.getTeam()) alpha = 0;
             g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
             super.render(g2d);
             g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1));

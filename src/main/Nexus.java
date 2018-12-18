@@ -9,8 +9,8 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Nexus extends BasicTower implements Battleable
 {
-    private transient String[] itemList = new String[10];
-    private transient String[] itemDescription = new String[10];
+    private transient String[] itemList = new String[11];
+    private transient String[] itemDescription = new String[11];
     public transient int gold = 50;
     public transient int crop = 20;
     public transient int odamant = 10;
@@ -32,7 +32,7 @@ public class Nexus extends BasicTower implements Battleable
         itemList[7] = "colBarrier.png";
         itemList[8] = "BasicInfantry.png";
         itemList[9] = "BasicInfantry.png";
-
+        itemList[10] = "rowBarrier.png";
         itemDescription[0] = "이 친구는 주변의 광산, 농장, 제련소에서 노동을 하며 돈을 벌 수 있습니다.\n 기본적인 공격력과 방어력도 가지고 있지요.\n 가격 : 10gold";
         itemDescription[1] = "적절한 사거리와 적절한 데미지를 가지고, 적절한 크기와 함께 적절한 아름다움을 가진 적절한 대포입니다.\n 적절한 가격으로 적절하게 지을 수 있습니다.\n 가격 : 20gold + 10crop + 5odamant";
         itemDescription[2] = "한 대만 맞으면 부셔져 버릴 것 같은 모습과는 다르게, 끝에 도달하기만 한다면... 콰광!\n 가격 : 10gold + 5crop";
@@ -43,26 +43,33 @@ public class Nexus extends BasicTower implements Battleable
         itemDescription[7] = "세로 방어막 입니다.\n아무 공격도 하지 않으며, 길을 막아주는 역할만 합니다.\n 가격 : 7gold + 5crop";
         itemDescription[8] = "원거리 공격이 가능한 마법사 입니다.\n 그러나 집에 박혀 연구만 한 나머지 느린 이동속도와 약한 채력을 가집니다.\n 가격 : 10gold + 3crop";
         itemDescription[9] = "델막샤의 친위대 시절 혹독한 훈련을 받은 불굴의 기사입니다.\n강한 정신력과 높은 채력을 소지하고 있습니다.\n 가격 : 20gold";
+        itemDescription[10] = "연막탄 입니다. \n가격 : 30gold";
         this.printBottom = false;
     }
 
     protected Rectangle[] items()
     {
-        Rectangle[] ret = new Rectangle[10];
+        Rectangle[] ret = new Rectangle[11];
         if (!new Rectangle(0, 0, Game.WIDTH, Game.HEIGHT).contains(BattleScene.getOnScreenLocation(this.getMidPoint().getPoint())))
         {
             for (int r = 0; r < 2; ++r)
+            {
                 for (int c = 0; c < 5; ++c)
                 {
                     ret[5 * r + c] = new Rectangle(c * 83 + BattleScene.getCameraX(), r * 50 + BattleScene.getCameraY(), 83, 50);
                 }
+            }
+            ret[10] = new Rectangle(5 * 83 + BattleScene.getCameraX(), BattleScene.getCameraY(), 83, 50);
         } else
         {
             for (int r = 0; r < 2; ++r)
+            {
                 for (int c = 0; c < 5; ++c)
                 {
                     ret[5 * r + c] = new Rectangle(c * 83 + (int) this.getMidPoint().x, r * 50 + (int) this.getMidPoint().y, 83, 50);
                 }
+            }
+            ret[10] = new Rectangle(5 * 83 + (int) this.getMidPoint().x, (int) this.getMidPoint().y, 83, 50);
         }
         return ret;
     }
@@ -140,6 +147,16 @@ public class Nexus extends BasicTower implements Battleable
                     crop -= 10;
                     odamant -= 5;
                 }
+            } else if (rect[10].contains(mouseClickedOnMapLocation))
+            {
+                if (gold >= 30)
+                {
+                    imageArrangementUnit = itemList[10];
+                    selectedArrangementUnit = true;
+                    itemNumberOfSelectedUnit = 10;
+                    this.mouseClickedOnMapLocation = new Point(Integer.MAX_VALUE, Integer.MIN_VALUE);
+                    gold -= 30;
+                }
             } else if (rect[2].contains(mouseClickedOnMapLocation))
             {
                 if (gold >= 10 && crop >= 5)
@@ -153,7 +170,8 @@ public class Nexus extends BasicTower implements Battleable
                 if (gold >= 7 && crop >= 10)
                 {
                     handler.addObject(new GoblinGangInfantry(team, this.x + this.getWIDTH(), this.y + this.getHEIGHT(), GameManager.loadImage(itemList[3]), ID.Infantry, handler, RenderOrder.Main.order));
-                    gold -= 7; crop -= 10;
+                    gold -= 7;
+                    crop -= 10;
                 }
             } else if (rect[4].contains(mouseClickedOnMapLocation))
             {
@@ -166,7 +184,7 @@ public class Nexus extends BasicTower implements Battleable
                 }
             } else if (rect[5].contains(mouseClickedOnMapLocation))
             {
-                if (gold>=8 && odamant>=1)
+                if (gold >= 8 && odamant >= 1)
                 {
                     handler.addObject(new NeukinShamanInfantry(team, this.x + this.getWIDTH(), this.y + this.getHEIGHT(), GameManager.loadImage(itemList[5]), ID.Infantry, handler, RenderOrder.Main.order));
                     gold -= 8;

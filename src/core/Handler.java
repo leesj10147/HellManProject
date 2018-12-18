@@ -35,11 +35,6 @@ public class Handler
             {
                 obj.tick();
             }*/
-        for (GameObject object : objects)
-        {
-            if (objects.contains(object) == false)
-                System.out.println("what?");
-        }
         while (!addList.isEmpty()) objects.add(addList.poll());
         while (!removeList.isEmpty())
         {
@@ -66,7 +61,6 @@ public class Handler
     {
         this.removeList.add(object);
     }
-
     public synchronized GameObject findObjectById(ID id)
     {
         for (GameObject tempObject : objects)
